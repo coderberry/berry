@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: berry_production
-  username: berry
-  password: <%= ENV["BERRY_DATABASE_PASSWORD"] %>
+  database: <%= ENV["DATABASE_URL"] %>
