@@ -13,8 +13,8 @@
     <%= csp_meta_tag %>
     <%= vite_client_tag %>
 
-    <%= vite_javascript_tag "packs/application.js", media: 'all', "data-turbo-track": "reload" %>
-    <%= vite_stylesheet_tag "packs/application.js", media: 'all', "data-turbo-track": "reload" unless ViteRuby.instance.dev_server_running? %>
+    <%= vite_stylesheet_tag "styles.scs", media: "all", "data-turbo-track": "reload" unless ViteRuby.instance.dev_server_running? %>
+    <%= vite_javascript_tag "application.js", media: "all", "data-turbo-track": "reload" %>
 
     <% begin %>
       <%= display_meta_tags title: current_page.data["title"] %>

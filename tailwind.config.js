@@ -1,3 +1,7 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './app/**/**/*.html.erb',
@@ -12,8 +16,13 @@ module.exports = {
       }
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
-    require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
   ]
 }
