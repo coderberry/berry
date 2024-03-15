@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Berry</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">-->
+<!--    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">-->
+<!--    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">-->
+<!--    <link rel="manifest" href="/site.webmanifest">-->
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
     <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
-    <!--
-      If using a TypeScript entrypoint file:
-        vite_typescript_tag 'application'
 
-      If using a .jsx or .tsx entrypoint, add the extension:
-        vite_javascript_tag 'application.jsx'
+    <%= vite_javascript_tag "packs/application.js", media: 'all', "data-turbo-track": "reload" %>
+    <%= vite_stylesheet_tag "packs/application.js", media: 'all', "data-turbo-track": "reload" unless ViteRuby.instance.dev_server_running? %>
 
-      Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
-    -->
-
+    <% begin %>
+      <%= display_meta_tags title: current_page.data["title"] %>
+    <% rescue %>
+      <%= display_meta_tags title: yield(:title) || "berry.sh" %>
+    <% end %>
   </head>
 
   <body>
