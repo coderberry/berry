@@ -22,9 +22,13 @@
     <% end %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="font-inter antialiased bg-black text-slate-100 tracking-tight">
+    <div class="flex flex-col min-h-screen overflow-hidden">
+      <%= render partial: "header" %>
+      <main class="grow">
+        <%= yield %>
+      </main>
+      <%= render partial: "footer" %>
+    </div
   </body>
 </html>
