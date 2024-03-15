@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 gem "bootsnap", require: false
+gem "honeybadger", "~> 5.7"
 gem "jbuilder"
 gem "meta-tags", "~> 2.20"
 gem "pg", "~> 1.1"
@@ -17,6 +18,8 @@ gem "tzinfo-data", platforms: %i[windows jruby]
 gem "vite_rails", "~> 3.0"
 
 group :development, :test do
+  gem "better_errors", "~> 2.10"
+  gem "binding_of_caller", "~> 1.0"
   gem "debug", platforms: %i[mri windows]
 end
 

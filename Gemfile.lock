@@ -79,6 +79,10 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     base64 (0.2.0)
+    better_errors (2.10.1)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
+      rouge (>= 1.0.0)
     better_html (2.1.0)
       actionview (>= 6.0)
       activesupport (>= 6.0)
@@ -88,6 +92,8 @@ GEM
       smart_properties
     bigdecimal (3.1.7)
     bindex (0.8.1)
+    binding_of_caller (1.0.1)
+      debug_inspector (>= 1.2.0)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -107,6 +113,7 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    debug_inspector (1.2.0)
     drb (2.2.1)
     dry-cli (1.0.0)
     erb_lint (0.5.0)
@@ -119,6 +126,7 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    honeybadger (5.7.0)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -234,6 +242,7 @@ GEM
     reline (0.4.3)
       io-console (~> 0.5)
     rexml (3.2.6)
+    rouge (4.2.0)
     rubocop (1.62.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -334,10 +343,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  better_errors (~> 2.10)
+  binding_of_caller (~> 1.0)
   bootsnap
   capybara
   debug
   erb_lint (~> 0.5.0)
+  honeybadger (~> 5.7)
   jbuilder
   meta-tags (~> 2.20)
   pg (~> 1.1)
