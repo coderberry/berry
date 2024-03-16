@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require "commonmarker"
-
-class MarkdownComponent < ViewComponent::Base
+class UI::MarkdownComponent < ::BaseComponent
   THEME_PATH = Rails.root.join("vendor/themes").to_s.freeze
 
   def initialize(markdown:, theme: "silverwind")
@@ -37,7 +35,7 @@ class MarkdownComponent < ViewComponent::Base
         hardbreaks: true,
         github_pre_lang: true,
         width: 80,
-        unsafe: false,
+        unsafe: true, # Allow raw HTML - see https://github.github.com/gfm/#html-block
         escape: false,
         sourcepos: false,
       },

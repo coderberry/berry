@@ -21,4 +21,4 @@ console.log('Vite ⚡️ Rails')
 
 import "../config"
 import "../controllers"
-import "./application.css"
+import "./application.scss"

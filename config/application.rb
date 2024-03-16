@@ -23,5 +23,12 @@ module Berry
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # ViewComponent
+    config.eager_load_paths << Rails.root.join("app/components") # is this needed?
+    config.view_component.component_parent_class = "::BaseComponent"
+    config.view_component.generate.locale = true
+    config.view_component.generate.sidecar = true
+    config.view_component.generate.stimulus_controller = true
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UI::BreadcrumbsComponent < ViewComponent::Base
+class UI::BreadcrumbsComponent < ::BaseComponent
   def initialize(current_page)
     @breadcrumbs = [
       {

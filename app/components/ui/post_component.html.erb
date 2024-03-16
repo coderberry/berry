@@ -2,8 +2,11 @@
   <% page.with_title(title: title) %>
   <h3 class="italic -mt-4">Published <%= published_at %> by Eric Berry</h3>
 
-  <article class="prose prose-xl prose-invert max-w-full mt-6">
-    <%= image_tag @banner_image_url, alt: title %>
+  <article class="prose prose prose-invert max-w-full mt-6">
+    <%= render UI::ImageComponent.new(
+      path: @banner_image_url,
+      alt: title
+    ) %>
     <%= content %>
   </article>
 <% end %>

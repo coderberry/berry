@@ -8,17 +8,11 @@ published_at: 2023-03-07
 
   *Dear reader: this is a very long article without a specific target audience in mind. I hope you enjoy reading it as much as I did writing it.*
 
-  ```ruby
-  def foo
-    puts "Hello, World!"
-  end
-  ```
-
   This morning I woke up and took an Uber ride from my hotel in Hollywood, California, to the Burbank Airport. I am headed back home.
 
   Hollywood was the home of the inaugural [Rails SaaS Conference](https://railssaas.com/), a small, "next-generation" Ruby on Rails conference led by [Andrew Culver](https://twitter.com/andrewculver).
 
-  Before I begin, I should mention to those who do not know me; I'm aGn extrovert and **I love people**. Steve, my Uber driver, was no exception.
+  Before I begin, I should mention to those who do not know me; I'm an extrovert and **I love people**. Steve, my Uber driver, was no exception.
 
   Steve and I laughed all the way to the airport as I listened to his stories and misadventures. He told me about when he picked up Lady Gaga to get a pack of cigarettes in the middle of the night so her manager wouldn't find out. She picked up her smokes, then they both just drove around while she smoked and they shared their favorite recipes. I learned about the time he fell into the role of Script Supervisor on the classic "Married with Children" TV series. And the time he and Waylon Jennings had a smoke together on a movie set. When Waylon was called back to be on camera, he yelled, "not until I finish my smokes with my friend Steve!". He even told me about working with Jared Leto (a peculiar, but kind-hearted guy with an odd sense of humor). He explained how Jared would help him get food from the food truck window (Steve uses a wheelchair and can't reach the window). They quickly set up the routine where Steve would find a table to eat at while Jared picked up the food.
 
@@ -28,19 +22,35 @@ published_at: 2023-03-07
 
   We landed in Burbank on Wednesday afternoon. We were staying at the [Dream Hotel](https://www.dreamhotels.com/hollywood), a once-parking garage turned swanky Hollywood hot spot with a killer rooftop view and walls of NFTs for sale in the lobby. The hotel is located one block south of the famous Hollywood Boulevard, where you can find the "Walk of Fame", where you can find more than 2,700 brass stars embedded in the sidewalk.
 
-  "Dream Hotel, Hollywood, California"
+  <%= render UI::ImageComponent.new(
+    path: "blog/rails-saas-conference/dream-hotel.jpg",
+    alt: "Dream Hotel, Hollywood, California",
+    caption: "[Dream Hotel, Hollywood, California](https://www.hyatt.com/en-US/hotel/california/dream-hollywood/laxdz)"
+  ) %>
 
   As Nate can tell you, I love to experience the local culture wherever I go. Many people know me as somewhat of a novelty seeker. While in Japan, I rode the Shinkansen (bullet train) from Osaka to Tokyo and found myself at a secret kink club. In Amsterdam, I walked the streets of the Red Light district, drank fresh Heineken, and smoked at a "coffee shop" (I'm not even sure they sold coffee). In Portugal, I painted tiles inside a monastery and stayed at a palace on the beach. If we were to video chat, you would find a wall of baseball hats behind my desk, each carrying memories of experiences worldwide. The hats represent _The Adventures of Eric Berry_, collected from places I've visited. I can look at each hat and re-live those memories in my mind. It's my own personal _Wayback Machine_.
 
-  "Each hat tells a story of another adventure"
+  <%= render UI::ImageComponent.new(
+    path: "blog/rails-saas-conference/hats.jpg",
+    alt: "Each hat tells a story of another adventure",
+    caption: "Each hat tells a story of another adventure"
+  ) %>
 
   This was my first time in Hollywood since I was young, so I wanted to take full advantage of the opportunity. Nate and I decided to explore the area. I won't share all of our experiences during the trip, but one really stands out to me as being uniquely _"Hollywood"_. From our hotel window, we could see the giant Scientology sign on top of a 12-story brick building. I knew a little bit about the religion from Netflix documentaries and a visit to their spiritual center in Clearwater, Florida. The possibility of seeing the inside of the super-secret celebrity center which Tom Cruise called his 2nd home was too much for me to resist.
 
-  "Nate and I walking the streets of Hollywood"
+  <%= render UI::ImageComponent.new(
+    path: "blog/rails-saas-conference/scientology-building.jpg",
+    alt: "Nate and I walking the streets of Hollywood",
+    caption: "Nate and I walking the streets of Hollywood"
+  ) %>
 
   Of course, we didn't expect to be able to get in. While we were walking in front of the building (which I later found was the back), we were greeted by two enthusiastic young women with invitations to come in and look around. The two reminded me of the time I spent as a missionary for the Mormon church years ago. Nate was a bit wary, but as I mentioned, I love unique experiences, and this definitely qualified. I was all in. _To the tour!_
 
-  "Nate & I visiting the L. Ron Hubbard Life Exchibition"
+  <%= render UI::ImageComponent.new(
+    path: "blog/rails-saas-conference/scientology-entrance.jpg",
+    alt: "Nate & I visiting the L. Ron Hubbard Life Exhibition",
+    caption: "Nate & I visiting the [L. Ron Hubbard Life Exhibition](https://www.freedommag.org/english/la/issue02/page15a.html)"
+  ) %>
 
   Think what you will about Scientology and its founder, but they know how to put on one hell of a tour. I was dazzled by a bigger-than-life-size statue of an alien monster and what I believe to be its human servant. We saw unusual paintings depicting the evolution of Mr. Hubbard's life-long education and learned how Scientology became a religion. There were magazines and books galore that Mr. Hubbard either contributed to, or wrote throughout his life. About halfway through the tour, I turned a corner and saw what I was hoping to find: a working [E-Meter](https://en.wikipedia.org/wiki/E-meter)! With a super goofy grin, I grabbed the metal cans with each hand and watched as the tour guide, an auditor-in-training, walked me through how it works. It was a blast! At the end of the tour, we stood in front of a giant curtain that must have been at least 15 feet tall and 20 feet wide.
 
@@ -134,8 +144,8 @@ published_at: 2023-03-07
 
 <% end %>
 
-<%= render Blog::PostComponent.new(page: current_page) do |post| %>
+<%= render UI::PostComponent.new(page: current_page) do |post| %>
   <div class="prose prose-invert prose-xl max-w-full mt-6">
-    <%= render MarkdownComponent.new(markdown: markdown) %>
+    <%= render UI::MarkdownComponent.new(markdown: markdown) %>
   </div>
 <% end %>

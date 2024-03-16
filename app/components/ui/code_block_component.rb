@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UI::CodeBlockComponent < ViewComponent::Base
+class UI::CodeBlockComponent < ::BaseComponent
   def initialize(language: "ruby")
     @language = language
   end

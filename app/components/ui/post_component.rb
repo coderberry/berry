@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Blog::PostComponent < ViewComponent::Base
+class UI::PostComponent < ::BaseComponent
   attr_reader :page, :title, :published_at, :banner_image_url
 
   # @param resource [Sitepress::Resource]

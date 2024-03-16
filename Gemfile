@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 gem "bootsnap", require: false
-gem "commonmarker", "~> 1.0", require: false
+gem "commonmarker", "~> 1.0"
 gem "honeybadger", "~> 5.7"
 gem "inline_svg", "~> 1.9"
 gem "jbuilder"
