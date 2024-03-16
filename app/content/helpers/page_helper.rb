@@ -26,8 +26,4 @@ module PageHelper
   def render_layout(layout, **, &)
     render(html: capture(&), layout: "layouts/#{layout}", **)
   end
-
-  def render_markdown(&block)
-    render MarkdownComponent.new(markdown: block.call)
-  end
 end
