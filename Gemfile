@@ -3,7 +3,9 @@ source "https://rubygems.org"
 ruby file: ".ruby-version"
 
 gem "bootsnap", require: false
+gem "commonmarker", "~> 1.0", require: false
 gem "honeybadger", "~> 5.7"
+gem "inline_svg", "~> 1.9"
 gem "jbuilder"
 gem "meta-tags", "~> 2.20"
 gem "pg", "~> 1.1"
@@ -15,12 +17,15 @@ gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: %i[windows jruby]
+gem "view_component", "~> 3.11"
 gem "vite_rails", "~> 3.0"
 
 group :development, :test do
   gem "better_errors", "~> 2.10"
   gem "binding_of_caller", "~> 1.0"
   gem "debug", platforms: %i[mri windows]
+  gem "pry-byebug", "~> 3.10"
+  gem "pry-rails", "~> 0.3.9"
 end
 
 group :development do
@@ -35,6 +40,3 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "view_component", "~> 3.11"
-
-gem "inline_svg", "~> 1.9"

@@ -1,0 +1,13 @@
+---
+title: Blog
+---
+
+<%= render Page::ContainerComponent.new(page: current_page) do |page| %>
+  <% page.with_title(title: current_page.data.fetch("title")) %>
+
+  <% site.resources.glob("blog/*.html.*")
+       .reject { |post| post.request_path == "/blog" }
+       .each do |post| %>
+    <%= link_to_page post %>
+  <% end %>
+<% end %>

@@ -1,5 +1,4 @@
 # frozen_string_literal: true
 
-class Ui::ContainerComponent < ViewComponent::Base
-
+class UI::ContainerComponent < ViewComponent::Base
 end

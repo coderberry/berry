@@ -3,32 +3,8 @@ title: berry.sh
 breadcrumb: Home
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col min-h-screen">
   <main class="grow">
-    <section>
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="pt-10 pb-12 md:pt-16 md:pb-20">
-          <div class="text-center">
-            <h1 class="text-2xl tracking-tight font-extrabold text-gray-300 sm:text-3xl md:text-4xl">
-              <span class="block xl:inline">Hi 👋 I'm Eric Berry</span>
-            </h1>
-            <p class="max-w-md mx-auto text-lg text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            <p class="prose-2xl text-slate-500">
-              Rubyist &amp; Experienced SaaS Builder
-            </p>
-            </p>
-          </div>
-        </div>
-        <p class="prose-2xl mb-8">
-          With over 16 years of hands-on experience as a Ruby on Rails enthusiast, I specialize in the end-to-end
-          development lifecycle of enterprise-grade web applications.
-        </p>
-        <p class="prose-2xl">
-          From design and prototyping to deployment and maintenance, I've consistently delivered revenue-generating
-          solutions. Currently seeking new opportunities due to recent changes, I bring a proven track record of driving
-          project success through efficiency and scalability.
-        </p>
-      </div>
-    </section>
+    <%= render partial: "application/home/hero" %>
   </main>
 </div>
