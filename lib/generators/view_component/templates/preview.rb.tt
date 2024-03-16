@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+module <%= module_class_name %>
+  class Preview < <%= preview_parent_class %>
+    # You can specify the container class for the default template
+    # self.container_class = "w-1/2 border border-gray-300"
+
+    def default
+      Sitepress::<%= class_name %>::Component.new(<%= initialize_signature %>)
+    end
+  end
+end

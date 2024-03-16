@@ -1,3 +1,5 @@
+ignore:
+  - lib/generators
 plugins:
   - standard-rails:
       target_rails_version: 7.1

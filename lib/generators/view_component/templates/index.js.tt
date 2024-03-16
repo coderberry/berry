@@ -1,0 +1,11 @@
+import "./index.css"
+<%- unless skip_js? -%>
+import { Controller } from "@hotwired/stimulus"
+
+// Connects to data-controller="<%= data_controller_identifier %>"
+export default class extends Controller {
+  connect() {
+    console.log("Hello, Sitepress::<%= class_name %>!", this.element)
+  }
+}
+<%- end -%>

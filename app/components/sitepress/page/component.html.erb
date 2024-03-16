@@ -1,0 +1,13 @@
+<%= render Container::Component.new do %>
+  <% if render_breadcrumbs? %>
+    <% if breadcrumbs? %>
+      <%= render breadcrumbs %>
+    <% else %>
+      <%= render Sitepress::Breadcrumbs::Component.new(page: @page) %>
+    <% end %>
+  <% end %>
+
+  <%= title if title? %>
+
+  <%= content %>
+<% end %>

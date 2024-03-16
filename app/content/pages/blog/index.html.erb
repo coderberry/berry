@@ -2,12 +2,17 @@
 title: Blog
 ---
 
-<%= render Page::ContainerComponent.new(page: current_page) do |page| %>
-  <% page.with_title(title: current_page.data.fetch("title")) %>
+<%= render Sitepress::Page::Component.new(current_page) do |container| %>
+  <% container.with_title(title: current_page.data.fetch("title")) %>
 
-  <% site.resources.glob("blog/*.html.*")
-       .reject { |post| post.request_path == "/blog" }
-       .each do |post| %>
-    <%= link_to_page post %>
-  <% end %>
+  <div class="flex flex-col space-y-8">
+    <ul class="list-none">
+    <% site.resources.glob("blog/*.html.*")
+         .reject { |post| post.request_path == "/blog" }
+         .each do |post| %>
+      <%= render Sitepress::ArticleCard::Component.new(post) %>
+      <%#= link_to_page post %>
+    <% end %>
+    </ul>
+  </div>
 <% end %>

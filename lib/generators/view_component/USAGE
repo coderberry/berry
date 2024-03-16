@@ -1,0 +1,45 @@
+Description:
+============
+    Creates a new view component, test and preview files.
+    Pass the component name, either CamelCased or under_scored, and an optional list of attributes as arguments.
+
+    Alternatively, you can create a new Sitepress component.
+    These components integrate with the `current_page` param and are used to render content from Sitepress pages.
+
+Options:
+========
+    [--help]                # Print this help message and exit
+    [--sitepress]           # Create a Sitepress component
+    [--inline]              # Generate an inline component
+    [--skip-locale]         # Skip locale file
+    [--skip-test]           # Skip test file
+    [--skip-system-test]    # Skip system test file
+    [--skip-preview]        # Skip preview file
+    [--skip-js]             # Skip JavaScript file
+    [--skip-css]            # Skip CSS file
+
+Example:
+========
+    bin/rails generate view_component Profile name age
+
+    creates a Profile component and test:
+        Component:    app/components/profile/component.rb
+        Template:     app/components/profile/component.html.erb
+        Preview:      app/components/profile/component_preview.rb
+        CSS:          app/components/profile/component.css
+        JS:           app/components/profile/component.js
+        Locale:       app/components/profile/en.yml
+        Test:         test/components/profile_component_test.rb
+        System Test:  test/system/components/profile_component_test.rb
+
+    bin/rails generate view_component Profile name age --sitepress=true
+
+    creates a Sitepress::Profile component and test:
+        Component:    app/components/sitepress/profile/component.rb
+        Template:     app/components/sitepress/profile/component.html.erb
+        Preview:      app/components/sitepress/profile/component_preview.rb
+        CSS:          app/components/sitepress/profile/component.css
+        JS:           app/components/sitepress/profile/component.js
+        Locale:       app/components/sitepress/profile/en.yml
+        Test:         test/components/sitepress/profile_component_test.rb
+        System Test:  test/system/components/sitepress/profile_component_test.rb

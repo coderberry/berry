@@ -2,6 +2,8 @@
 title: The Rails SaaS Conference
 banner_image_url: blog/rails-saas-conference/heading
 published_at: 2023-03-07
+tldr: A recount of my experience at the Rails SaaS conference, a "next-generation" conference dedicated to the intersection of business and software development.
+author: Eric Berry
 ---
 
 <% markdown = capture do %>
@@ -22,7 +24,7 @@ published_at: 2023-03-07
 
   We landed in Burbank on Wednesday afternoon. We were staying at the [Dream Hotel](https://www.dreamhotels.com/hollywood), a once-parking garage turned swanky Hollywood hot spot with a killer rooftop view and walls of NFTs for sale in the lobby. The hotel is located one block south of the famous Hollywood Boulevard, where you can find the "Walk of Fame", where you can find more than 2,700 brass stars embedded in the sidewalk.
 
-  <%= render UI::ImageComponent.new(
+  <%= render Image::Component.new(
     path: "blog/rails-saas-conference/dream-hotel.jpg",
     alt: "Dream Hotel, Hollywood, California",
     caption: "[Dream Hotel, Hollywood, California](https://www.hyatt.com/en-US/hotel/california/dream-hollywood/laxdz)"
@@ -30,7 +32,7 @@ published_at: 2023-03-07
 
   As Nate can tell you, I love to experience the local culture wherever I go. Many people know me as somewhat of a novelty seeker. While in Japan, I rode the Shinkansen (bullet train) from Osaka to Tokyo and found myself at a secret kink club. In Amsterdam, I walked the streets of the Red Light district, drank fresh Heineken, and smoked at a "coffee shop" (I'm not even sure they sold coffee). In Portugal, I painted tiles inside a monastery and stayed at a palace on the beach. If we were to video chat, you would find a wall of baseball hats behind my desk, each carrying memories of experiences worldwide. The hats represent _The Adventures of Eric Berry_, collected from places I've visited. I can look at each hat and re-live those memories in my mind. It's my own personal _Wayback Machine_.
 
-  <%= render UI::ImageComponent.new(
+  <%= render Image::Component.new(
     path: "blog/rails-saas-conference/hats.jpg",
     alt: "Each hat tells a story of another adventure",
     caption: "Each hat tells a story of another adventure"
@@ -38,7 +40,7 @@ published_at: 2023-03-07
 
   This was my first time in Hollywood since I was young, so I wanted to take full advantage of the opportunity. Nate and I decided to explore the area. I won't share all of our experiences during the trip, but one really stands out to me as being uniquely _"Hollywood"_. From our hotel window, we could see the giant Scientology sign on top of a 12-story brick building. I knew a little bit about the religion from Netflix documentaries and a visit to their spiritual center in Clearwater, Florida. The possibility of seeing the inside of the super-secret celebrity center which Tom Cruise called his 2nd home was too much for me to resist.
 
-  <%= render UI::ImageComponent.new(
+  <%= render Image::Component.new(
     path: "blog/rails-saas-conference/scientology-building.jpg",
     alt: "Nate and I walking the streets of Hollywood",
     caption: "Nate and I walking the streets of Hollywood"
@@ -46,7 +48,7 @@ published_at: 2023-03-07
 
   Of course, we didn't expect to be able to get in. While we were walking in front of the building (which I later found was the back), we were greeted by two enthusiastic young women with invitations to come in and look around. The two reminded me of the time I spent as a missionary for the Mormon church years ago. Nate was a bit wary, but as I mentioned, I love unique experiences, and this definitely qualified. I was all in. _To the tour!_
 
-  <%= render UI::ImageComponent.new(
+  <%= render Image::Component.new(
     path: "blog/rails-saas-conference/scientology-entrance.jpg",
     alt: "Nate & I visiting the L. Ron Hubbard Life Exhibition",
     caption: "Nate & I visiting the [L. Ron Hubbard Life Exhibition](https://www.freedommag.org/english/la/issue02/page15a.html)"
@@ -54,7 +56,11 @@ published_at: 2023-03-07
 
   Think what you will about Scientology and its founder, but they know how to put on one hell of a tour. I was dazzled by a bigger-than-life-size statue of an alien monster and what I believe to be its human servant. We saw unusual paintings depicting the evolution of Mr. Hubbard's life-long education and learned how Scientology became a religion. There were magazines and books galore that Mr. Hubbard either contributed to, or wrote throughout his life. About halfway through the tour, I turned a corner and saw what I was hoping to find: a working [E-Meter](https://en.wikipedia.org/wiki/E-meter)! With a super goofy grin, I grabbed the metal cans with each hand and watched as the tour guide, an auditor-in-training, walked me through how it works. It was a blast! At the end of the tour, we stood in front of a giant curtain that must have been at least 15 feet tall and 20 feet wide.
 
-  "The wall of awards and recognitions"
+  <%= render Image::Component.new(
+    path: "blog/rails-saas-conference/scientology-finale.jpg",
+    alt:"The wall of awards and recognitions",
+    caption: "The wall of awards and recognitions"
+  ) %>
 
   At the push of a button, the curtains opened, revealing [awards and recognitions](https://www.lronhubbard.org/awards-and-recognitions/) given to Mr. Hubbard throughout his life. Then the walls parted to reveal another layer of awards. Then another. Then another. Then another. Finally, the walls opened just enough to show a 10 foot tall photograph of Mr. Hubbard himself. There were lights, music, voice narrations, and what I can only call "_pizzazz_."
 
@@ -68,7 +74,11 @@ published_at: 2023-03-07
 
   The main room had a professional camera crew set up and ready to record. Based on my experience as an extra in the movie [Waffle Street](https://www.youtube.com/watch?v=nKww2V5PeM0), I knew this crew was legit. I later learned that Andrew hired the film crew to create a professional video archive that will be available to the Rails community. At times in the middle of the talks, we would hear "_hold up_". The speaker would pause as Paule, my new (and only) favorite makeup artist, dabbed the sweat and shine from their face. Paule even took the time to make me even more handsome (is it possible? :-P) with a coat of makeup that I couldn't imagine wearing back home.
 
-  "Paule and I prepping for the headshots"
+  <%= render Image::Component.new(
+    path: "blog/rails-saas-conference/hollywood-backstage.jpg",
+    alt: "Paule and I prepping for the headshots",
+    caption: "Paule and I prepping for the headshots"
+  ) %>
 
   Ok.. Enough back story. Let's get to the sessions.
 
@@ -82,7 +92,11 @@ published_at: 2023-03-07
 
   [Don Pottinger](https://twitter.com/donpottinger) (co-founder of [LanguaTalk](https://languatalk.com/)) was also a massive inspiration to me. Before I get into explaining the reason, let me first tell you a little about my years running [CodeFund](https://github.com/gitcoinco/code_fund_ads). In 2017, Nate and I started this company (previously named Code Sponsor). It was an ethical advertising platform (100% open source with zero tracking) that generated over USD 1M for open-source maintainers all over the world. Nate, along with [Andrew Mason](https://twitter.com/andrewmcodes), did most of the engineering, [Justin Dorfman](https://twitter.com/jdorfman) ran the Podcast network and helped manage our publishers, and I filled in the gaps: Sales, Marketing, Customer Service, Financial Distributions, etc. It was like being dropped into the deep end of the pool where I had to learn fast or fail.
 
-  "Myself, Andrew Mason, and Nate Hopkins at the Sin City Ruby Conf"
+  <%= render Image::Component.new(
+    path: "blog/rails-saas-conference/dream-team.jpg",
+    alt: "Myself, Andrew Mason, and Nate Hopkins at the Sin City Ruby Conf",
+    caption: "Myself, [Andrew Mason](https://x.com/andrewmcodes), and [Nate Hopkins](https://x.com/hopsoft) at the [Sin City Ruby Conf](https://www.sincityruby.com)"
+  ) %>
 
   After over 3+ years of trying to make CodeFund a success, we eventually shut it down in June 2020. This was a tough and emotional decision. I knew if I were to continue, it would require sacrificing my relationship with my family. I couldn't be a good husband and father while spending almost all my waking hours thinking about the business. I chose family and vowed never to rerun another company.
 
@@ -96,7 +110,11 @@ published_at: 2023-03-07
 
   In [his talk](https://www.youtube.com/watch?v=sxC4DhKGVkM) from 2008, Evan shared his experiences in building communities. I learned new concepts like "_No [contribution] is too small_" and "_Every contributor has worth._" These were new concepts to me, having come from the Java community. Through his talk and others that day, I was introduced to what a community really is. I was hooked.
 
-  "There I am, goatee and all!"
+  <%= render Image::Component.new(
+    path: "blog/rails-saas-conference/mwrc-conf.jpg",
+    alt:"There I am, goatee and all!",
+    caption: "There I am, goatee and all!"
+  ) %>
 
   14 years later, I was once again moved by the journey Evan took us on. His talk was heartfelt and chock full of nostalgia. The sense of belonging was overwhelming as I eagerly listened to him talk about... you guessed it: **community**.
 
@@ -116,7 +134,11 @@ published_at: 2023-03-07
 
   I also had the great pleasure of meeting the [Evil Martians](https://evilmartians.com/), [Alexander Tishchenko](https://mobile.twitter.com/evilmartians) and [Vladimir Dementyev](https://twitter.com/palkan_tula). When I first met Alexander, I was reminded of Dr. Wario, except skinnier and less evil (irony?). He and Vladimir are two of the most intelligent people I've ever met. They are the brains behind technologies such as [Overmind](https://evilmartians.com/opensource/overmind), [ImgProxy](https://evilmartians.com/products/imgproxy), and [AnyCable](https://evilmartians.com/products/anycable). They also are some of the **best Ruby/Rails bloggers** I know. Not only were they humble, but they were hilarious and a joy to be around. Alexander shared stories with me about how he started Evil Martians, the logo's origins, and his late gorgeous black cat (RIP, little kitty!).
 
-  "Alexander Tishchenko and Vladimir Dementyev, Evil Martians"
+  <%= render Image::Component.new(
+    path: "blog/rails-saas-conference/evil-geniuses.jpg",
+    alt:  "Alexander Tishchenko and Vladimir Dementyev, Evil Martians",
+    caption: "[Alexander Tishchenko](https://x.com/at_martian) and [Vladimir Dementyev](https://x.com/palkan_tula), Evil Martians"
+  ) %>
 
   I also had the great fortune to meet two amazing humans: [Abe Storey](https://twitter.com/abe_storey) and [Jacqueline Lum](https://twitter.com/jacqlum). Together we drank Star Wars-themed cocktails at the Scum & Villainy Cantina. As always, I wanted to know all I could when I met them. We discussed their company, [Entri](https://www.entri.com/), and the challenges of marketing a UX solution to developers. We then "got real" and discussed topics that were very personal to us. It was a genuine connection that I believe has built the foundation for a life-long friendship. If your company deals with DNS registry as part of your app, [check them out](https://www.entri.com/).
 
@@ -136,7 +158,15 @@ published_at: 2023-03-07
 
   I'll end with a tweet I shared at the end of the conference.
 
-  QUOTE
+  <div class="max-w-[500px] mx-auto">
+    <blockquote class="twitter-tweet" data-theme="dark">
+      <p lang="en" dir="ltr">
+        The <a href="https://twitter.com/RailsSaaS?ref_src=twsrc%5Etfw">@RailsSaaS</a> conference was by far the most impactful one I’ve attended. Not only did I learn about amazing tools to speed up development, but I learned from some of the most successful leaders in our industry.
+      </p>
+      &mdash; Eric Berry (@coderberry)
+      <a href="https://twitter.com/coderberry/status/1578540742288371714?ref_src=twsrc%5Etfw">October 8, 2022</a>
+    </blockquote>
+  </div>
 
   Feel free to reach out to me anytime. My **Twitter** DM's are always open.
 
@@ -144,8 +174,8 @@ published_at: 2023-03-07
 
 <% end %>
 
-<%= render UI::PostComponent.new(page: current_page) do |post| %>
+<%= render Sitepress::Article::Component.new(current_page) do %>
   <div class="prose prose-invert prose-xl max-w-full mt-6">
-    <%= render UI::MarkdownComponent.new(markdown: markdown) %>
+    <%= render Markdown::Component.new(markdown: markdown) %>
   </div>
 <% end %>
