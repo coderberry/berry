@@ -173,10 +173,9 @@ author: Eric Berry
   Feel free to reach out to me anytime. My [**Twitter** DM's](https://x.com/coderberry) are always open.
 
   Eric
-
 <% end %>
 
-<%= render Sitepress::Article::Component.new(current_page) do |article| %>
+<%= render Sitepress::Article::Component.new(current_page, plugins: ["twitter_widget"]) do |article| %>
   <% article.with_reading_time(markdown) %>
   <%= render Markdown::Component.new(markdown: markdown) %>
 <% end %>
