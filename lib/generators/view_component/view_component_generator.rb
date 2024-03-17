@@ -22,49 +22,49 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
 
   def create_template_file
     template "component.html.erb",
-             File.join(root_path, class_path, file_name, "component.html.erb")
+      File.join(root_path, class_path, file_name, "component.html.erb")
   end
 
   def create_test_file
     return if options[:skip_test]
 
     template "component_test.rb",
-             File.join(test_root_path, class_path, "#{file_name}_test.rb")
+      File.join(test_root_path, class_path, "#{file_name}_test.rb")
   end
 
   def create_system_test_file
     return if options[:skip_system_test]
 
     template "component_system_test.rb",
-             File.join(system_test_root_path, class_path, "#{file_name}_test.rb")
+      File.join(system_test_root_path, class_path, "#{file_name}_test.rb")
   end
 
   def create_preview_file
     return if options[:skip_preview]
 
     template "preview.rb",
-             File.join(root_path, class_path, file_name, "preview.rb")
+      File.join(root_path, class_path, file_name, "preview.rb")
   end
 
   def create_css_file
     return if options[:skip_css]
 
     template "index.css",
-             File.join(root_path, class_path, file_name, "index.css")
+      File.join(root_path, class_path, file_name, "index.css")
   end
 
   def create_js_file
     return if options[:skip_js] && options[:skip_css]
 
     template "index.js",
-             File.join(root_path, class_path, file_name, "index.js")
+      File.join(root_path, class_path, file_name, "index.js")
   end
 
   def create_locale_file
     return if options[:skip_locale]
 
     template "en.yml",
-             File.join(root_path, class_path, file_name, "en.yml")
+      File.join(root_path, class_path, file_name, "en.yml")
   end
 
   private
