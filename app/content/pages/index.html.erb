@@ -20,21 +20,15 @@ breadcrumb: Home
           Please feel free to view the code on
           <a class="link" href="https://github.com/coderberry/berry">GitHub</a>.
         </p>
-        <div class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <div>
-            <a class="btn text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="https://resume.io/r/j3XGOzm83">
-              View my resume
-              <span class="tracking-normal text-black group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
-            </a>
-          </div>
-          <div>
-            <a class="btn text-slate-200 hover:text-white bg-slate-900 bg-opacity-25 hover:bg-opacity-30 w-full transition duration-150 ease-in-out" href="/blog">
-              <svg class="shrink-0 fill-slate-300 mr-3 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2 4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4ZM4 5V19H20V5H4ZM6 7H12V13H6V7ZM8 9V11H10V9H8ZM14 9H18V7H14V9ZM18 13H14V11H18V13ZM6 15V17L18 17V15L6 15Z"></path>
-              </svg>
-              <span>Read my blog</span>
-            </a>
-          </div>
+        <div class="flex-1 mt-4 hidden md:block">
+          <a href="/blog" class="rounded-full bg-white/10 p-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-white/20 mx-2">
+            <%= inline_svg_tag "blog.svg", class: "fill-slate-300 inline-block w-5 h-5 pb-1" %>
+            <span class="text-lg font-semibold">Blog Articles</span>
+          </a>
+          <a href="https://resume.com/r/j3XGOzm83j" class="rounded-full bg-white/10 p-8 pl-10 py-3 text-sm font-semibold text-white shadow-sm hover:bg-white/20 mx-2">
+            <span class="text-lg font-semibold">View Resume</span>
+            <%= inline_svg_tag "external-link.svg", class: "flex-shrink fill-slate-300 inline-block w-5 h-5 mb-1" %>
+          </a>
         </div>
       </div>
     </main>
