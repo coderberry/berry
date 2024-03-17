@@ -14,8 +14,8 @@ module ImageCaption
 
     private
 
-    def build_component(**options)
-      ImageCaption::Component.new(**options)
+    def build_component(**)
+      ImageCaption::Component.new(**)
     end
   end
 end

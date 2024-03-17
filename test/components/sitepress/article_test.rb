@@ -14,8 +14,8 @@ module Sitepress::Article
 
     private
 
-    def build_component(**options)
-      Sitepress::Article::Component.new(**options)
+    def build_component(**)
+      Sitepress::Article::Component.new(**)
     end
   end
 end

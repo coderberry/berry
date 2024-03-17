@@ -14,8 +14,8 @@ module Sitepress::ArticleCard
 
     private
 
-    def build_component(**options)
-      Sitepress::ArticleCard::Component.new(**options)
+    def build_component(**)
+      Sitepress::ArticleCard::Component.new(**)
     end
   end
 end

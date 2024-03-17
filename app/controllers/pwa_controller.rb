@@ -12,5 +12,4 @@ class PwaController < ApplicationController
       format.json
     end
   end
-
 end

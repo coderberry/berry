@@ -1,5 +1,7 @@
 ignore:
   - lib/generators
+  - ignore:
+      - 'test/**/*'
 plugins:
   - standard-rails:
       target_rails_version: 7.1

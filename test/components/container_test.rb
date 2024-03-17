@@ -14,8 +14,8 @@ module Container
 
     private
 
-    def build_component(**options)
-      Container::Component.new(**options)
+    def build_component(**)
+      Container::Component.new(**)
     end
   end
 end

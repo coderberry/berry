@@ -14,8 +14,8 @@ module Sitepress::Breadcrumbs
 
     private
 
-    def build_component(**options)
-      Sitepress::Breadcrumbs::Component.new(**options)
+    def build_component(**)
+      Sitepress::Breadcrumbs::Component.new(**)
     end
   end
 end

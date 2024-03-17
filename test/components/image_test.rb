@@ -14,8 +14,8 @@ module Image
 
     private
 
-    def build_component(**options)
-      Image::Component.new(**options)
+    def build_component(**)
+      Image::Component.new(**)
     end
   end
 end

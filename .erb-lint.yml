@@ -4,6 +4,7 @@ EnableDefaultLinters: true
 exclude:
   - '**/vendor/**/*'
   - '**/node_modules/**/*'
+  - app/components/image_caption/component.html.erb # due to html_safe
 
 linters:
   ErbSafety:

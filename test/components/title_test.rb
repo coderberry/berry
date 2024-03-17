@@ -14,8 +14,8 @@ module Title
 
     private
 
-    def build_component(**options)
-      Title::Component.new(**options)
+    def build_component(**)
+      Title::Component.new(**)
     end
   end
 end

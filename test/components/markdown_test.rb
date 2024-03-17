@@ -14,8 +14,8 @@ module Markdown
 
     private
 
-    def build_component(**options)
-      Markdown::Component.new(**options)
+    def build_component(**)
+      Markdown::Component.new(**)
     end
   end
 end

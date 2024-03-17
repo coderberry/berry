@@ -9,7 +9,7 @@ module Sitepress
       def initialize(current_page, foo:)
         @page = current_page[:page]
         @data = page.data
-          @foo = foo
+        @foo = foo
       end
     end
   end

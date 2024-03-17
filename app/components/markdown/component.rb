@@ -30,7 +30,7 @@ module Markdown
       {
         parse: {
           smart: false,
-          default_info_string: "",
+          default_info_string: ""
         },
         render: {
           hardbreaks: true,
@@ -38,7 +38,7 @@ module Markdown
           width: 80,
           unsafe: true, # Allow raw HTML - see https://github.github.com/gfm/#html-block
           escape: false,
-          sourcepos: false,
+          sourcepos: false
         },
         extension: {
           strikethrough: true,
@@ -51,7 +51,7 @@ module Markdown
           footnotes: false,
           description_lists: false,
           front_matter_delimiter: "",
-          shortcodes: true,
+          shortcodes: true
         },
         format: [:html]
       }
