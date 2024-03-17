@@ -1,9 +1,17 @@
 <%= render Sitepress::Page::Component.new(page) do |page| %>
   <% page.with_title(title: title) %>
 
-  <h3 class="italic -mt-4">Published <%= published_at %> by Eric Berry</h3>
+  <h3 class="italic -mt-4 flex align-middle">
+    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block fill-white h-6 min-w-[1.375rem] scale-90 w-6 mr-2" aria-hidden="true">
+      <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
+      <path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
+    </svg>
+    <%= published_at %> by <%= author %>
+  </h3>
+  <%= reading_time if reading_time? %>
 
-  <article class="prose prose prose-invert max-w-full mt-6">
+
+  <article class="prose prose-invert max-w-full max-w-full mt-6">
     <%= render Image::Component.new(
       path: @banner_image_url,
       alt: title

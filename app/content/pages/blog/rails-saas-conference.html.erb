@@ -58,7 +58,7 @@ author: Eric Berry
 
   <%= render Image::Component.new(
     path: "blog/rails-saas-conference/scientology-finale.jpg",
-    alt:"The wall of awards and recognitions",
+    alt: "The wall of awards and recognitions",
     caption: "The wall of awards and recognitions"
   ) %>
 
@@ -112,7 +112,7 @@ author: Eric Berry
 
   <%= render Image::Component.new(
     path: "blog/rails-saas-conference/mwrc-conf.jpg",
-    alt:"There I am, goatee and all!",
+    alt: "There I am, goatee and all!",
     caption: "There I am, goatee and all!"
   ) %>
 
@@ -136,7 +136,7 @@ author: Eric Berry
 
   <%= render Image::Component.new(
     path: "blog/rails-saas-conference/evil-geniuses.jpg",
-    alt:  "Alexander Tishchenko and Vladimir Dementyev, Evil Martians",
+    alt: "Alexander Tishchenko and Vladimir Dementyev, Evil Martians",
     caption: "[Alexander Tishchenko](https://x.com/at_martian) and [Vladimir Dementyev](https://x.com/palkan_tula), Evil Martians"
   ) %>
 
@@ -161,21 +161,22 @@ author: Eric Berry
   <div class="max-w-[500px] mx-auto">
     <blockquote class="twitter-tweet" data-theme="dark">
       <p lang="en" dir="ltr">
-        The <a href="https://twitter.com/RailsSaaS?ref_src=twsrc%5Etfw">@RailsSaaS</a> conference was by far the most impactful one I’ve attended. Not only did I learn about amazing tools to speed up development, but I learned from some of the most successful leaders in our industry.
+        The <a href="https://twitter.com/RailsSaaS?ref_src=twsrc%5Etfw">@RailsSaaS</a> conference was by far the most
+        impactful one I’ve attended. Not only did I learn about amazing tools to speed up development, but I learned
+        from some of the most successful leaders in our industry.
       </p>
       &mdash; Eric Berry (@coderberry)
       <a href="https://twitter.com/coderberry/status/1578540742288371714?ref_src=twsrc%5Etfw">October 8, 2022</a>
     </blockquote>
   </div>
 
-  Feel free to reach out to me anytime. My **Twitter** DM's are always open.
+  Feel free to reach out to me anytime. My [**Twitter** DM's](https://x.com/coderberry) are always open.
 
   Eric
 
 <% end %>
 
-<%= render Sitepress::Article::Component.new(current_page) do %>
-  <div class="prose prose-invert prose-xl max-w-full mt-6">
-    <%= render Markdown::Component.new(markdown: markdown) %>
-  </div>
+<%= render Sitepress::Article::Component.new(current_page) do |article| %>
+  <% article.with_reading_time(markdown) %>
+  <%= render Markdown::Component.new(markdown: markdown) %>
 <% end %>

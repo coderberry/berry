@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-controller="layout" data-action="turbo:load->layout#logActiveControllers">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,10 +24,11 @@
   </head>
 
   <body class="font-inter antialiased bg-slate-800 text-slate-100 tracking-tight">
-    <a href="https://resume.io/r/j3XGOzm83" target="_blank" class="text-black flex justify-center items-center bg-amber-400 w-full p-2 font-bold">
-      <div>
-        I am currently looking for a new role. Click here to view my resume »
-      </div>
+    <div data-controller="scroll-progress" class="h-2 bg-indigo-400 fixed top-0"></div>
+
+    <a href="https://resume.io/r/j3XGOzm83" target="_blank" class="text-black flex justify-center items-center bg-amber-400 w-full p-3 md:p-2 font-bold text-sm md:text-base text-center">
+      <span class="block md:inline-block">I am currently looking for a new role.<span>
+      <span class="block md:inline-block">Click here to view my resume »</span>
     </a>
 
     <div class="flex flex-col">

@@ -3,6 +3,10 @@
 // ./bin/rails generate stimulus controllerName
 
 import { application } from "./application"
+import { registerControllers } from 'stimulus-vite-helpers'
 
-import ExampleController from "./example_controller"
-application.register("example", ExampleController)
+const defaultControllers = import.meta.glob('./**/*_controller.js', { eager: true })
+registerControllers(application, defaultControllers)
+
+import ScrollProgress from 'stimulus-scroll-progress'
+application.register('scroll-progress', ScrollProgress)
