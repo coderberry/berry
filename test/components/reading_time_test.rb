@@ -14,8 +14,8 @@ module ReadingTime
 
     private
 
-    def build_component(**options)
-      ReadingTime::Component.new(**options)
+    def build_component(**)
+      ReadingTime::Component.new(**)
     end
   end
 end
