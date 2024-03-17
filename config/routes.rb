@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   mount Lookbook::Engine, at: "/lookbook"
 
+  # legacy link
+  get "/posts/rails-saas-conference/" => redirect("/blog/rails-saas-conference")
+  get "/posts/rails-saas-conference" => redirect("/blog/rails-saas-conference")
+
   get "/service-worker.js" => "pwa#service_worker"
   get "/manifest.json" => "pwa#manifest"
 
