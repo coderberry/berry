@@ -1,0 +1,56 @@
+---
+title: Welcome to my playground
+banner_image_url:
+published_at: 2024-03-17
+tldr: A brief overview of the new berry.sh and what to expect in the future
+author: Eric Berry
+draft: true
+---
+<% markdown = capture do %>
+
+  ### tl;dr:
+
+  This website will act as my personal playground for vetting out techniques and patterns. As I continue to build out this site, I'll blog about how I did it and my thought processes behind doing so.
+
+  ### Losing your job sucks in today's economy
+
+  Last month I was downsized. In the past, I've never had a problem finding the next role fairly quickly. In fact, my wife Amber didn't worry until a couple of weeks into afterwards.
+
+  I have applied to about a dozen companies. It reminds me of what it felt like when I was single and dating. Now that I'm in my mid-40s, I do tend to approach interviewing differently than I had in years past. When I was younger, I'd date anyone who would agree to go out with me. Similarly, I used to take any job that sounded like they needed me. That approach transitioned about 8ish years ago. As my confidence and skills grew, I saw job interviews almost like a real date. I need to be attracted to them as well.
+
+  Over the past few weeks, I've _"dated"_ a handful of companies. Some of them really liked me, but I didn't see a future there. I was twitterpated with a couple of other companies, but they decided I wasn't what they wanted. With one company, I even spent about 40 hours trying to fix what I believe is an unfixable bug (fiber-based) only to be turned down afterwards.
+
+  I don't hold any grudge against anyone, but it has taken a huge toll on my confidence. I got to the point where I was asking myself if I'm in the right career.
+
+  I read an article the other day by [@dhh](https://x.com/dhh) entitled **[Developers are on edge](https://world.hey.com/dhh/developers-are-on-edge-4dfcf9c1)**. His first paragraph summed up my experience since being downsized. Here's an excerpt:
+
+  > It's a double whammy of anxiety for developers at the moment. On the one hand, the layoffs are dragging on. The industry has shed more jobs in a shorter period than any time since the dot-com bust over twenty years ago. Seasoned veterans who used to have recruiters banging on their door nonstop can suddenly barely get a callback.
+  > - David Heinemeier Hansson
+
+  It was comforting to me that I wasn't alone in this struggle. ***It also helped me recognize that I needed to adapt, and adapt fast.***
+
+  ### Going back to my roots
+
+  Like many developers learning Rails back then, my favorite way to learn was by watching [Railscasts](https://railscasts.com) by [Ryan Bates](https://twitter.com/rbates). I remember thinking "that guy really knows his stuff." I wanted to be like him, so I started a screencast series called "Teach me to code". This didn't last too long (maybe a dozen videos), but I learned something while doing so, which is, ***I learn the best when I'm teaching others***.
+
+  > There is no better way to learn than to teach.
+  > - Nobel laureate physicist Robert Oppenheimer
+
+  I've always felt I was a pretty damn good programmer, but never a great one. This may be due having worked together for 13+ years with the brilliant Nate Hopkins ([@hopsoft](https://x.com/hopsoft)). Nate has always been my mentor and can code circles around me. He is literally one of the best Ruby engineers out there. I believe most engineers would feel the same.
+
+  Nate has become one of the most listened to voices when it comes to "HTML over the wire". He has _openly_ built Ruby gems such as [stimulus_reflex](https://docs.stimulusreflex.com/), [cable_ready](https://cableready.stimulusreflex.com/), [turbo_boost-commands](https://github.com/hopsoft/turbo_boost-commands), [turbo_boost-streams](https://github.com/hopsoft/turbo_boost-streams), [universalid](https://github.com/hopsoft/universalid), and [tons](https://github.com/hopsoft/model_probe) [more](https://github.com/hopsoft/goldmine) [that](https://github.com/hopsoft/job_contracts) [you](https://github.com/hopsoft/job_contracts) [probably](https://github.com/hopsoft/tag_columns) [have](https://github.com/hopsoft/bg) [never](https://github.com/hopsoft/field_mapper) [heard](https://github.com/hopsoft/coin) [of](https://github.com/hopsoft/trix_embed).
+
+  ### Learn with me
+
+  I know there was a lot of back story just to get to the point of this article. Thanks for sticking with me.
+
+  **This website (berry.sh) will act as my personal playground for vetting out web development concepts and patterns.** I plan to teach how to implement changes to this website and provide a rich learning experience using some killer techniques
+
+  ...
+
+<% end %>
+
+<%= render Sitepress::Article::Component.new(current_page, plugins: ["twitter_widget"]) do |article| %>
+  <% article.with_reading_time(markdown) %>
+  <%= render Markdown::Component.new(markdown: markdown) %>
+<% end %>

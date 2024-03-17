@@ -9,6 +9,9 @@ title: Blog
     <ul class="list-none">
     <% site.resources.glob("blog/*.html.*")
          .reject { |post| post.request_path == "/blog" }
+         .reject { |post| post.data["draft"] == true}
+         .sort_by { |post| post.data["published_at"] }
+         .reverse
          .each do |post| %>
       <%= render Sitepress::ArticleCard::Component.new(post) %>
       <%#= link_to_page post %>
