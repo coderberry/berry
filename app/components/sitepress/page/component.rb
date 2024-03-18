@@ -9,6 +9,8 @@ module Sitepress
       renders_one :title, "Title::Component"
 
       def initialize(page, render_breadcrumbs: true)
+        super
+
         @page = page
         @data = page.data
         @renders_breadcrumbs = render_breadcrumbs

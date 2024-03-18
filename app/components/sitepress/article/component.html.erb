@@ -1,22 +1,20 @@
-<%= render Sitepress::Page::Component.new(page) do |page| %>
-  <% page.with_title(title: title) %>
+<%= c_sitepress_page(article) do %>
+  <%= c_title(article.title) %>
 
-  <h3 class="italic -mt-4 flex align-middle text-slate-300">
-    <%= helpers.inline_svg_tag "calendar.svg", class: "fill-slate-300 w-6 h-6 mr-2 inline-block" %>
-    <%= published_at %> by <%= author %>
-  </h3>
+  <%= tag.h3 class: css("title.wrapper") do %>
+    <%= helpers.inline_svg_tag "calendar.svg", class: css("title.svg") %>
+    <%= tag.span t(".published_by", published_at: article.published_at, author: article.author), class: css("title.published_by") %>
+  <% end %>
+
   <%= reading_time if reading_time? %>
 
-  <article class="prose prose-invert max-w-full max-w-full mt-6">
-    <%= render Image::Component.new(
-      path: @banner_image_url,
-      alt: title
-    ) %>
+  <%= tag.article class: css("article") do %>
+    <%= c_image(path: article.banner_image_url, alt: title) if article.banner_image_url %>
 
-    <% if twitter_widget? %>
+    <% if article.twitter_plugin %>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <% end %>
 
     <%= content %>
-  </article>
+  <% end %>
 <% end %>

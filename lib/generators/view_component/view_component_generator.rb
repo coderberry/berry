@@ -9,8 +9,8 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   class_option :inline, type: :boolean, default: false
   class_option :skip_preview, type: :boolean, default: false
   class_option :skip_js, type: :boolean, default: false
-  class_option :skip_css, type: :boolean, default: true
   class_option :skip_locale, type: :boolean, default: true
+  class_option :skip_tailwind, type: :boolean, default: true
   class_option :skip_test, type: :boolean, default: false
   class_option :skip_system_test, type: :boolean, default: true
 
@@ -46,15 +46,15 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
       File.join(root_path, class_path, file_name, "preview.rb")
   end
 
-  def create_css_file
+  def create_tailwind_file
     return if options[:skip_css]
 
-    template "index.css",
-      File.join(root_path, class_path, file_name, "index.css")
+    template "tailwind.yml",
+      File.join(root_path, class_path, file_name, "tailwind.yml")
   end
 
   def create_js_file
-    return if options[:skip_js] && options[:skip_css]
+    return if options[:skip_js]
 
     template "index.js",
       File.join(root_path, class_path, file_name, "index.js")

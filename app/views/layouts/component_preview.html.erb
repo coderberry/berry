@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html style="background-color: <%= params[:lookbook][:display][:bg_color] || "white" %>">
+  <head>
+    <title>Component Preview</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <script type="text/javascript" src="/twitter.js"></script>
+    <%= vite_javascript_tag "application.js", media: "all", "data-turbo-track": "reload" %>
+  </head>
+  <body class="p-5">
+    <div class="mx-auto" style="max-width: <%= params[:lookbook][:display][:max_width] || "100%" %> ">
+      <%= yield %>
+    </div>
+  </body>
+</html>

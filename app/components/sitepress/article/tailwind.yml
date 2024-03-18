@@ -1,0 +1,5 @@
+title:
+  wrapper: italic -mt-4 flex align-middle text-slate-300
+  svg: fill-slate-300 w-6 h-6 mr-2 inline-block
+  published_by:
+article: prose prose-invert max-w-full mt-6

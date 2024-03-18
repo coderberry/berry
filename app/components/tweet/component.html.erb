@@ -1,0 +1,9 @@
+<%= tag.div class: css("wrapper") do %>
+  <%= tag.blockquote data: { theme: theme }, class: "twitter-tweet" do %>
+    <%= tag.p lang: "en", dir: "ltr" do %>
+      <%= c_markdown { content } %>
+    <% end %>
+    &mdash; <%= author %> (<%= handle %>)
+    <%= link_to date_published, link %>
+  <% end %>
+<% end %>

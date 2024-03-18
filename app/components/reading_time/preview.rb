@@ -6,7 +6,8 @@ module ReadingTime
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
-      Sitepress::ReadingTime::Component.new(content:)
+      markdown = "word " * 1000
+      render ReadingTime::Component.new(markdown)
     end
   end
 end

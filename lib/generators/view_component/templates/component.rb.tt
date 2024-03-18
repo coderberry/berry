@@ -7,12 +7,14 @@ module <%= module_class_name %>
 
 <%- if initialize_signature -%>
     def initialize(<%= initialize_signature %>)
+      super
+
 <%- if sitepress? -%>
       @page = current_page[:page]
       @data = page.data
 <%- end -%>
 <%- if initialize_body.present? -%>
-        <%= initialize_body %>
+      <%= initialize_body %>
 <%- end -%>
     end
 <%- end -%>

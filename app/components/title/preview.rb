@@ -6,7 +6,7 @@ module Title
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
-      Sitepress::Title::Component.new
+      render Title::Component.new("Hello, Title!")
     end
   end
 end

@@ -5,19 +5,25 @@ module Sitepress
     class Component < ApplicationViewComponent
       attr_reader :page, :data
 
-      def initialize(current_page)
+      # @param [PageModel, ArticleModel] page
+      def initialize(page)
+        super
+
+        @page = page
+
         @breadcrumbs = [
           {
-            text: current_page[:page].data.fetch("breadcrumb", current_page[:page].data.fetch("title")),
-            path: current_page[:page].request_path
+            text: page.breadcrumb || page.title,
+            path: page.request_path
           }
         ]
 
-        current_page[:page].parents.compact.each do |page|
+        page.parents.compact.each do |p|
           breadcrumb_data = {
-            text: page.data.fetch("breadcrumb", page.data.fetch("title")),
-            path: page.request_path
+            text: p.breadcrumb || p.title,
+            path: p.request_path
           }
+
           @breadcrumbs << breadcrumb_data
         end
 

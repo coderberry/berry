@@ -180,6 +180,11 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    markdown-rails (2.1.0)
+      actionview (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
+      redcarpet (>= 3.0.0)
     matrix (0.4.2)
     meta-tags (2.20.0)
       actionpack (>= 6.0.0, < 7.2)
@@ -409,6 +414,7 @@ DEPENDENCIES
   inline_svg (~> 1.9)
   jbuilder
   lookbook (~> 2.2)
+  markdown-rails (~> 2.1)
   meta-tags (~> 2.20)
   pg (~> 1.1)
   pry-byebug (~> 3.10)

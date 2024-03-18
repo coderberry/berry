@@ -1,0 +1,9 @@
+<%= tag.div class: css("wrapper") do %>
+  <%= tag.div class: css("container") do %>
+    <% if render_breadcrumbs? %>
+      <%= render Sitepress::Breadcrumbs::Component.new(page) %>
+    <% end %>
+
+    <%= content %>
+  <% end %>
+<% end %>
