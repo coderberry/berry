@@ -11,3 +11,8 @@
 @import "../css/layout";
 @import "../css/form";
 
+@layer components {
+  .debug {
+    @apply border border-red-200;
+  }
+}
