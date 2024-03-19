@@ -7,7 +7,10 @@ class ArticleModel < Sitepress::Model
   # Returns the articles excluding the blog index page
   # @return [Array<ArticleModel>]
   def self.articles
-    all.reject { |article| article.request_path == "/blog" }
+    all.reject { |article|
+      article.request_path == "/blog" ||
+        article.published_at.nil?
+    }
   end
 
   def published?
