@@ -1,0 +1,13 @@
+---
+title:
+banner_image_url:
+published_at:
+tldr:
+author: Eric Berry
+---
+
+<%%= c_sitepress_article(ArticleModel.new(current_page)) do |article| %>
+  <%%= c_markdown do %>
+    Hello
+  <%% end %>
+<%% end %>
