@@ -11,19 +11,25 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://berry.sh</loc>
-    <lastmod>2024-03-19T11:23:34-06:00</lastmod>
+    <lastmod>2024-03-19T13:29:06-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://berry.sh/blog</loc>
-    <lastmod>2024-03-19T11:23:34-06:00</lastmod>
+    <lastmod>2024-03-19T13:29:06-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://berry.sh/blog/awesome_hotwire</loc>
+    <lastmod>2024-03-19T13:29:06-06:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://berry.sh/blog/rails-saas-conference</loc>
-    <lastmod>2024-03-19T11:23:34-06:00</lastmod>
+    <lastmod>2024-03-19T13:29:06-06:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
