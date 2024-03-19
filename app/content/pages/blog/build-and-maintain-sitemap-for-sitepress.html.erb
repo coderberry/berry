@@ -1,0 +1,13 @@
+---
+title: Build & Maintain Sitemap for Sitepress
+tldr: Generate your sitemap.xml file for Sitepress content
+author: Eric Berry
+---
+
+<%= c_sitepress_article(ArticleModel.new(current_page)) do |article| %>
+  <%= c_markdown do %>
+    See [GitHub PR]()
+  <% end %>
+
+  <%= c_code_block(path: "public/sitemap.xml", language: :xml) %>
+<% end %>
