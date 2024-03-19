@@ -14,8 +14,8 @@ module ScrollToTop
 
     private
 
-    def build_component(**options)
-      ScrollToTop::Component.new(**options)
+    def build_component(**)
+      ScrollToTop::Component.new(**)
     end
   end
 end

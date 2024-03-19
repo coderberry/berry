@@ -6,7 +6,7 @@ module ScrollToTop
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
-      Sitepress::ScrollToTop::Component.new()
+      Sitepress::ScrollToTop::Component.new
     end
   end
 end
