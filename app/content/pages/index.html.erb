@@ -3,23 +3,24 @@ title: berry.sh
 breadcrumb: Home
 ---
 
-<%= render Container::Component.new do %>
+<%= c_sitepress_page(current_page, render_title: false, render_breadcrumbs: false) do %>
   <div class="flex flex-col">
     <main class="grow">
       <div class="max-w-3xl mx-auto text-center">
-        <h1 class="h1 pb-16 pt-12 accent-amber-100">
-          👋 I'm Eric
-        </h1>
+        <%= c_title "👋 I'm Eric", css_overrides: "text-5xl md:text-6xl mb-12" %>
+
         <p class="text-xl text-slate-300 mb-12 text-left">
           With over 16 years of hands-on experience as a Ruby on Rails enthusiast, I specialize in the end-to-end
           development lifecycle of enterprise-grade web applications. From design and prototyping to deployment and
           maintenance, I've consistently delivered revenue-generating solutions.
         </p>
+
         <p class="text-xl text-slate-300 mb-12 text-left">
           This website acts as my personal blog, but also my playground with various Rails and Hotwire patterns.
           Please feel free to view the code on
           <a class="link" href="https://github.com/coderberry/berry">GitHub</a>.
         </p>
+
         <div class="flex-1 mt-4 hidden md:block">
           <a href="/blog" class="rounded-full bg-white/10 p-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-white/20 mx-2">
             <%= inline_svg_tag "blog.svg", class: "fill-slate-300 inline-block w-5 h-5 pb-1" %>

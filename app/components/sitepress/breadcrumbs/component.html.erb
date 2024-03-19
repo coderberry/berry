@@ -1,25 +1,17 @@
-<nav aria-label="Breadcrumbs" class="w-full mb-12 md:mb-0">
-  <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-start gap-3 grow flex-wrap sm:items-center">
+<%= tag.nav class: css("nav"), aria: { label: t(".breadcrumbs") } do %>
+  <%= tag.ul itemscope: true, itemtype: "https://schema.org/BreadcrumbList", class: css("ul") do %>
     <% @breadcrumbs.each_with_index do |breadcrumb, index| %>
-      <li class="flex items-center" itemprop="itemListElement" itemscope postition="<%= index + 1 %>" itemtype="https://schema.org/ListItem">
-        <%= link_to(
-              breadcrumb[:path],
-              class: "font-medium text-sm text-slate-300 hover:text-white transition transition duration-150 ease-in-out #{index == @breadcrumbs.size - 1 ? "text-slate-50" : ''}",
-              itemprop: "item"
-            ) do %>
-          <span itemprop="name"><%= breadcrumb[:text] %></span>
+      <%= tag.li itemscope: true, position: (index + 1), itemtype: "https://schema.org/ListItem", class: css("li") do %>
+        <%= link_to breadcrumb[:path], class: css("link", { "text-slate-50": index == @breadcrumbs.size - 1 }), itemprop: "item" do %>
+          <%= tag.span breadcrumb[:text], itemprop: true %>
         <% end %>
-
-        <meta itemprop="position" content="<%= index + 1 %>">
-
-        <span class="text-slate-300 ml-2">
+        <%= tag.meta itemprop: "position", content: (index + 1) %>
+        <%= tag.span class: css("span") do %>
           <% unless index == @breadcrumbs.size - 1 %>
-            <svg class="h-5 w-5 flex-shrink-0 text-slate-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
-            </svg>
+            <%= inline_svg_tag "chevron-right.svg", class: css("svg") %>
           <% end %>
-        </span>
-      </li>
+        <% end %>
+      <% end %>
     <% end %>
-  </ul>
-</nav>
+  <% end %>
+<% end %>

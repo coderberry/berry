@@ -1,3 +1,5 @@
-<div class="max-w-4xl mx-auto px-4 sm:px-6">
-  <%= content %>
-</div>
+<%= tag.main class: css("wrapper", css_overrides) do %>
+  <%= tag.div class: css("container") do %>
+    <%= content %>
+  <% end %>
+<% end %>

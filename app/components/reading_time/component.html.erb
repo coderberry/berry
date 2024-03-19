@@ -1,4 +1,4 @@
-<div class="mt-2 text-slate-400">
-  <span class="italic">Estimated reading time:</span>
-  <%= helpers.distance_of_time_in_words(Time.now, Time.now + minutes.minutes) %>
-</div>
+<%= tag.div class: css("wrapper") do %>
+  <%= tag.span t(".estimated_reading_time"), class: css("estimate") %>
+  <%= tag.span helpers.distance_of_time_in_words(Time.now, Time.now + minutes.minutes), class: "reading_time" %>
+<% end %>

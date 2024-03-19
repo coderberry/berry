@@ -5,6 +5,8 @@ module ImageCaption
     attr_reader :html
 
     def initialize(markdown:)
+      super
+
       @html = Commonmarker.to_html(markdown)
     end
   end

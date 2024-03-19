@@ -3,11 +3,17 @@
     <% if breadcrumbs? %>
       <%= render breadcrumbs %>
     <% else %>
-      <%= render Sitepress::Breadcrumbs::Component.new(page: @page) %>
+      <%= render Sitepress::Breadcrumbs::Component.new(page) %>
     <% end %>
   <% end %>
 
-  <%= title if title? %>
+  <% if render_title? %>
+    <% if title? %>
+      <%= render title %>
+    <% else %>
+      <%= render Title::Component.new(page.title) %>
+    <% end %>
+  <% end %>
 
   <%= content %>
 <% end %>

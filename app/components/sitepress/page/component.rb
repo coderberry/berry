@@ -3,15 +3,22 @@
 module Sitepress
   module Page
     class Component < ApplicationViewComponent
-      attr_reader :page, :data
+      attr_reader :page
 
-      renders_one :breadcrumbs, "Sitepress::Breadcrumbs::Component"
       renders_one :title, "Title::Component"
+      renders_one :breadcrumbs, "Sitepress::Breadcrumbs::Component"
 
-      def initialize(page, render_breadcrumbs: true)
+      # @param [PageModel] page
+      def initialize(page, render_title: true, render_breadcrumbs: true, **)
+        super
+
         @page = page
-        @data = page.data
-        @renders_breadcrumbs = render_breadcrumbs
+        @render_title = render_title
+        @render_breadcrumbs = render_breadcrumbs
+      end
+
+      def render_title?
+        @render_title
       end
 
       def render_breadcrumbs?

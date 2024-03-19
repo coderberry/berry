@@ -1,4 +1,5 @@
 class PageModel < Sitepress::Model
-  collection glob: "**/*.html*"
-  data :title
+  include ModelRelationships
+
+  data :title, :breadcrumb
 end

@@ -5,6 +5,8 @@ module Image
     attr_reader :path, :alt, :caption
 
     def initialize(path:, alt:, caption: nil)
+      super
+
       @path = path
       @alt = alt
       @caption = caption

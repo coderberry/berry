@@ -4,27 +4,30 @@ module Markdown
   class Component < ApplicationViewComponent
     THEME_PATH = Rails.root.join("vendor/themes").to_s.freeze
 
-    def initialize(markdown:, theme: "silverwind")
+    def initialize(theme: "silverwind")
       raise ArgumentError, "Invalid theme [#{theme}]" unless THEMES.include?(theme.to_s)
 
-      @html =
-        Commonmarker.to_html(
-          markdown,
-          options: commonmarker_options,
-          plugins: {
-            syntax_highlighter: {
-              theme: theme,
-              path: THEME_PATH
-            }
-          }
-        )
-    end
+      @theme = theme.to_s
 
-    def call
-      @html.html_safe
+      super
     end
 
     private
+
+    def markdown_content(markdown)
+      markdown_without_leading_spaces = markdown.gsub(/^ +(?=\S)/, "")
+
+      Commonmarker.to_html(
+        markdown_without_leading_spaces,
+        options: commonmarker_options,
+        plugins: {
+          syntax_highlighter: {
+            theme: @theme,
+            path: THEME_PATH
+          }
+        }
+      ).html_safe
+    end
 
     def commonmarker_options
       {

@@ -8,6 +8,8 @@ gem "honeybadger", "~> 5.7"
 gem "inline_svg", "~> 1.9"
 gem "jbuilder"
 gem "lookbook", "~> 2.2"
+
+gem "markdown-rails", "~> 2.1"
 gem "meta-tags", "~> 2.20"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
@@ -23,15 +25,13 @@ gem "view_component-contrib", "~> 0.2.2"
 gem "vite_rails", "~> 3.0"
 
 group :development, :test do
-  gem "better_errors", "~> 2.10"
-  gem "binding_of_caller", "~> 1.0"
   gem "debug", platforms: %i[mri windows]
   gem "pry-byebug", "~> 3.10"
   gem "pry-rails", "~> 0.3.9"
 end
 
 group :development do
-  gem "appmap", "~> 1.0"
+  gem "appmap", "~> 1.0", require: ENV["APPMAP"] == "true"
   gem "erb_lint", "~> 0.5.0"
   gem "standard", "~> 1.35"
   gem "standard-rails", "~> 1.0"

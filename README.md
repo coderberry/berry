@@ -1,64 +1,64 @@
-# README
+# berry.sh
 
-### Dev Tools
+This app is my personal blog and playground to vet out ideas and build interactive demos.
 
-Tailing production logs:
+## ViewComponents
 
-```bash
-ssh deploy@64.23.220.70
-journalctl --user --unit=berry-sh-server
-```
+I am using the [view_component-contrib](https://github.com/palkan/view_component-contrib) extension to [ViewComponents](https://viewcomponents.org) as my component library.
 
-### Components
-
-We are using [view_component-contrib] for our components.
-
-Docs:
+### Available Components
 
 ```
-Usage:
-  bin/rails generate view_component NAME [attribute] [options]
+components
+├── container         # Container (responsive)
+├── image             # Images
+├── image_caption     # Image captions (with markdown)
+├── markdown          # Markdown using Commonmarker
+├── reading_time      # Time to read
+├── title             # H-tags for title
+├── tweet             # Embedded tweet (uses Twitter js)|
+└── sitepress/
+    ├── page          # Wrapper for Sitepress Page
+    ├── article       # ArticleModel Container
+    ├── article_card  # Article card for /blog/index
+    └── breadcrumbs   # Breadcrumbs
+```
 
-Options:
-  [--skip-namespace]        # Skip namespace (affects only isolated engines)
-                            # Default: false
-  [--skip-collision-check]  # Skip collision check
-                            # Default: false
-  [--skip-test]             # Indicates when to generate skip test
-                            # Default: false
-  [--skip-system-test]      # Indicates when to generate skip system test
-                            # Default: false
-  [--skip-preview]          # Indicates when to generate skip preview
-                            # Default: false
+### Component Helpers
 
-Runtime options:
-  -f, [--force]                                      # Overwrite files that already exist
-  -p, [--pretend], [--no-pretend], [--skip-pretend]  # Run but do not make any changes
-  -q, [--quiet], [--no-quiet], [--skip-quiet]        # Suppress status output
-  -s, [--skip], [--no-skip], [--skip-skip]           # Skip files that already exist
+To reduce the verbosity that comes with using ViewComponents, I created helper methods for each component. Each method is prefixed with a `c_` to isolate the namespace.
 
-Description:
-============
-    Creates a new view component, test and preview files.
-    Pass the component name, either CamelCased or under_scored, and an optional list of attributes as arguments.
+See [app/helpers/component_helper.rb](https://github.com/coderberry/berry/blob/main/app/helpers/component_helper.rb) to view how it was done.
 
-Example:
-========
-    bin/rails generate view_component Profile name age
+### Tailwind YAML Files
 
-    creates a Profile component and test:
-        Component:    app/components/profile/component.rb
-        Template:     app/components/profile/component.html.erb
-        Test:         test/components/profile_component_test.rb
-        System Test:  test/system/components/profile_component_test.rb
-        Preview:      app/components/profile/component_preview.rb
+The components each have their own `tailwind.yml` file that is used to configure the Tailwind class names. I decided to use this approach to reduce the amount of mental load when managing the templates, as well as provide a way for me to use shared classes between and within components. I know that I could have used CSS, but I wanted to keep the component code encapsulated and honestly, it was just more fun to build. This was inspired by [Nate Hopkin's](https://x.com/hopsoft) [turbo_boost-commands](https://github.com/hopsoft/turbo_boost-commands) gem.
+
+## Article Structure
+
+A blog post might have the following structure:
+
+```erb
+---
+title: My Post
+breadcrumb: My Post
+---
+
+<%= c_article(ArticleModel.new(current_page)) do %>
+  <%= c_markdown do %>
+    This is my post!
+
+    I hope you like it.
+  <% end %>
+
+  <%= c_image path: "avatar.jpg", alt: "Eric Berry" %>
+<% end %>
 ```
 
 
+## Markdown & Syntax Highlighting
 
-### Syntax Highlighting Themes
-
-These are the themes for the `MarkdownComponent` using the [Commonmarker]() gem.
+I decided to use the rust-backed [Commonmarker](https://github.com/gjtorikian/commonmarker) gem to render markdown.
 
 Themes are in the `vendor/themes` directory.
 
@@ -220,3 +220,11 @@ Themes are in the `vendor/themes` directory.
 - zenburn
 - zenburnesque
 ```
+
+## Inspirations & Attributions
+
+I learned a great deal by studying [Marco Roth's](https://twitter.com/marcoroth_) [Hotwire.io](https://github.com/marcoroth/hotwire.io) codebase. The core of the [Sitepress](https://sitepress.cc) setup is based on his repo.
+
+I really liked how [PolarisViewComponents](https://polarisviewcomponents.org/lookbook/) created helper methods for each of their components. This allows for less boilerplate and prettier code.
+
+I took the Textmate Themes from [filmgirl/Textmate-Themes](https://github.com/filmgirl/TextMate-Themes) and renamed the all theme names to use underscores so they can be accessed via `:sym`.

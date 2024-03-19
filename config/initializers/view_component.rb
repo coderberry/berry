@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.view_component.default_preview_layout = "component_preview"
   config.view_component.generate.locale = true
   config.view_component.generate.sidecar = true
   config.view_component.generate.stimulus_controller = true

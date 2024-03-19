@@ -1,4 +1,12 @@
 module PageHelper
+  include ComponentHelper
+
+  def markdown(&block)
+    content = block.call
+    render Markdown::Component.new(markdown: content)
+    # Commonmarker.render_html(capture(&), :DEFAULT)
+  end
+
   # Creates a hyperlink to a page using the `title` key. Change the default in the args
   # below if you use a different key for page titles.
   def link_to_page(page, title_key: "title", **attrs)

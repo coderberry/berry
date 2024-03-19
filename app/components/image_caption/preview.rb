@@ -6,6 +6,7 @@ module ImageCaption
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
+      render ImageCaption::Component.new(markdown: "Eric Berry ([@coderberry](https://x.com/coderberry))")
     end
   end
 end

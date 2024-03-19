@@ -1,0 +1,17 @@
+---
+title: Test
+tldr: This is a test
+breadcrumb: Test
+---
+
+<%= c_sitepress_article(ArticleModel.new(current_page)) do %>
+  <%= c_markdown do %>
+    ### HELLO
+
+    WORLD
+
+    ```ruby
+    puts "HELLO"
+    ```
+  <% end %>
+<% end %>
