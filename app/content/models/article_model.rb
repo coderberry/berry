@@ -8,6 +8,8 @@ class ArticleModel < Sitepress::Model
   # @return [Array<ArticleModel>]
   def self.articles
     all.reject(&:exclude?)
+      .sort_by { |article| article.published? ? article.published_at : Time.now }
+      .reverse
   end
 
   def exclude?
