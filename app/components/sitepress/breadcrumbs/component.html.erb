@@ -1,4 +1,4 @@
-<%= tag.nav class: css("nav"), aria: { label: t(".breadcrumbs") do %>
+<%= tag.nav class: css("nav"), aria: { label: t(".breadcrumbs") } do %>
   <%= tag.ul itemscope: true, itemtype: "https://schema.org/BreadcrumbList", class: css("ul") do %>
     <% @breadcrumbs.each_with_index do |breadcrumb, index| %>
       <%= tag.li itemscope: true, position: (index + 1), itemtype: "https://schema.org/ListItem", class: css("li") do %>

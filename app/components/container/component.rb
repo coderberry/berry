@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
-module Title
+module Container
   class Component < ApplicationViewComponent
-    attr_reader :title
-
-    def initialize(title, tag: :h1, **)
+    def initialize(**)
       super
-
-      @title = title
     end
   end
 end

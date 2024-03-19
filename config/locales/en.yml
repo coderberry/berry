@@ -29,3 +29,7 @@
 
 en:
   hello: "Hello world"
+view_components:
+  sitepress:
+    article:
+      published_by: "Published by %{author} on %{published_at}"

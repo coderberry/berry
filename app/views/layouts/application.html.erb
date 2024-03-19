@@ -13,12 +13,11 @@
     <%= csp_meta_tag %>
     <%= vite_client_tag %>
 
-    <script type="text/javascript" src="/twitter.js"></script>
     <%= vite_javascript_tag "application.js", media: "all", "data-turbo-track": "reload" %>
 
     <% begin %>
       <%= display_meta_tags title: current_page.data["title"] %>
-    <% rescue %>
+      <% rescue %>
       <%= display_meta_tags title: yield(:title) || "berry.sh" %>
     <% end %>
   </head>
@@ -28,17 +27,17 @@
       <div data-controller="scroll-progress" class="h-2 bg-indigo-400 fixed top-0"></div>
     <% end %>
 
-    <a href="https://resume.io/r/j3XGOzm83" target="_blank" class="text-black flex justify-center items-center bg-amber-400 w-full p-3 md:p-2 text-center">
-      <span class="block md:inline-block text-sm md:text-base">I am currently looking for a new role.<span>
-      <span class="block md:inline-block font-bold">Click here to view my resume »</span>
-    </a>
+    <%= link_to "https://resume.io/r/j3XGOzm83", target: "_blank", class: "text-black flex justify-center items-center bg-amber-400 w-full p-3 md:p-2 text-center" do %>
+      <%= tag.span "I'm currently looking for a new role.", class: "block md:inline-block text-sm md:text-base" %>
+      <%= tag.span "Click here to view my resume »", class: "block md:inline-block font-bold" %>
+    <% end %>
 
-    <div class="flex flex-col">
+    <%= tag.div class: "flex flex-col" do %>
       <%= render partial: "header" %>
-      <div class="px-4 md:px-0">
-      <%= yield %>
-      </div>
+      <%= tag.div(class: "px-4 md:px-0") { yield } %>
       <%= render partial: "footer" %>
-    </div>
+    <% end %>
+
+    <%= c_scroll_to_top %>
   </body>
 </html>

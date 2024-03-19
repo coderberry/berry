@@ -1,6 +1,6 @@
-li: my-6 flex flex-col gap-1
-link: font-semibold text-xl cursor-pointer underline decoration-wavy underline-offset-4 text-amber-500
+li: my-6
+link: font-semibold text-xl cursor-pointer underline decoration-wavy underline-offset-4 inline-block hover:text-amber-500
 published:
   wrapper: italic mt-2 flex align-middle items-center text-slate-300 text-sm -mt-[2px]
   svg: fill-slate-300 w-4 h-4 mr-2 inline-block
-tldr:
+tldr: mt-2

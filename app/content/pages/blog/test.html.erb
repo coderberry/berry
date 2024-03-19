@@ -4,16 +4,14 @@ tldr: This is a test
 breadcrumb: Test
 ---
 
-<%= c_sitepress_container(PageModel.new(current_page)) do %>
-  <%= c_sitepress_article(ArticleModel.new(current_page)) do %>
-    <%= c_markdown do %>
-      ### HELLO
+<%= c_sitepress_article(ArticleModel.new(current_page)) do %>
+  <%= c_markdown do %>
+    ### HELLO
 
-      WORLD
+    WORLD
 
-      ```ruby
-      puts "HELLO"
-      ```
-    <% end %>
+    ```ruby
+    puts "HELLO"
+    ```
   <% end %>
 <% end %>

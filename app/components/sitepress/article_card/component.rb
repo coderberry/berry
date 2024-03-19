@@ -7,7 +7,7 @@ module Sitepress
       attr_reader :article
 
       # @param [ArticleModel] article
-      def initialize(article)
+      def initialize(article, **)
         super
 
         @article = article

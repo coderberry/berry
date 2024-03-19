@@ -1,6 +1,8 @@
 class ArticleModel < Sitepress::Model
+  include ModelRelationships
+
   collection glob: "blog/*.html.*"
-  data :author, :banner_image_url, :published_at, :title, :tldr, :twitter_plugin
+  data :author, :banner_image_url, :published_at, :title, :tldr, :twitter_plugin, :breadcrumb
 
   # Returns the articles excluding the blog index page
   # @return [Array<ArticleModel>]

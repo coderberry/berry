@@ -2,7 +2,7 @@
 title: Blog
 breadcrumb: Blog
 ---
-<%= c_sitepress_container(PageModel.new(current_page)) do |container| %>
+<%= c_sitepress_page(PageModel.new(current_page)) do %>
   <div class="flex flex-col space-y-8">
     <ul class="list-none">
       <% ArticleModel.articles.each do |article| %>

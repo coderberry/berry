@@ -1,0 +1,15 @@
+<%= tag.button class: css("button"),
+            data: {
+              controller: "scroll-progress-appear",
+              action: "debounced:scroll@window->scroll-progress-appear#scroll
+                       click->scroll-progress-appear#scrollToTop",
+              scroll_progress_appear_min_y_value: "500",
+              transition_enter: "transition ease-out duration-100",
+              transition_enter_start: "transform opacity-0 scale-95",
+              transition_enter_end: "transform opacity-100 scale-100",
+              transition_leave: "transition ease-in duration-75",
+              transition_leave_start: "transform opacity-100 scale-100",
+              transition_leave_end: "transform opacity-0 scale-95"
+            } do %>
+  <%= inline_svg_tag "arrow-up-circle-line.svg", class: css("svg") %>
+<% end %>

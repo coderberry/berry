@@ -5,10 +5,12 @@ class ApplicationViewComponent < ViewComponentContrib::Base
   include TailwindHelper
   include PageHelper
 
+  attr_reader :css_overrides
+
   # Sitepress helpers
   delegate :image_tag, :link_to_page, to: :helpers
 
-  def initialize(*)
+  def initialize(*args, **options)
     tailwind_yaml_path = [
       Rails.root.join("app/components"),
       self.class.name.gsub("::", "/").underscore.gsub("/component", "/tailwind.yml")
@@ -19,6 +21,9 @@ class ApplicationViewComponent < ViewComponentContrib::Base
       self.class.instance_variable_set(:@tailwind_defaults, defaults) unless Rails.env.development?
       defaults
     end
+
+    @css_overrides = options.delete(:css_overrides)
+    @css_overrides = @css_overrides.split if @css_overrides.is_a?(String)
   end
 
   # Auto-creates array of components which is passed to `ViewComponent::Base.with_collection`

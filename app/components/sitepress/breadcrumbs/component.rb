@@ -3,7 +3,7 @@
 module Sitepress
   module Breadcrumbs
     class Component < ApplicationViewComponent
-      attr_reader :page, :data
+      attr_reader :page
 
       # @param [PageModel, ArticleModel] page
       def initialize(page)

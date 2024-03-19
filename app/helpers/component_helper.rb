@@ -12,6 +12,7 @@ module ComponentHelper
   #   <% end %>
 
   COMPONENT_HELPERS = {
+    container: "Container::Component",
     image: "Image::Component",
     image_caption: "ImageCaption::Component",
     markdown: "Markdown::Component",
@@ -19,8 +20,8 @@ module ComponentHelper
     sitepress_article: "Sitepress::Article::Component",
     sitepress_article_card: "Sitepress::ArticleCard::Component",
     sitepress_breadrumbs: "Sitepress::Breadcrumbs::Component",
-    sitepress_container: "Sitepress::Container::Component",
     sitepress_page: "Sitepress::Page::Component",
+    scroll_to_top: "ScrollToTop::Component",
     title: "Title::Component",
     tweet: "Tweet::Component"
   }.freeze
