@@ -12,6 +12,7 @@ module ComponentHelper
   #   <% end %>
 
   COMPONENT_HELPERS = {
+    code_block: "CodeBlock::Component",
     container: "Container::Component",
     image: "Image::Component",
     image_caption: "ImageCaption::Component",

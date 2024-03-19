@@ -4,3 +4,6 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+# Sitemap
+require "sitemap_generator/tasks"

@@ -6,7 +6,7 @@ module <%= module_class_name %>
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
-      Sitepress::<%= class_name %>::Component.new(<%= initialize_signature %>)
+      <%= module_class_name %>::Component.new(<%= initialize_signature %>)
     end
   end
 end

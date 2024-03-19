@@ -7,10 +7,13 @@ class ArticleModel < Sitepress::Model
   # Returns the articles excluding the blog index page
   # @return [Array<ArticleModel>]
   def self.articles
-    all.reject { |article|
-      article.request_path == "/blog" ||
-        article.published_at.nil?
-    }
+    all.reject(&:exclude?)
+  end
+
+  def exclude?
+    return true if request_path == "/blog"
+
+    publish_date == "Unpublished" && (Rails.env.production? || ENV["GENERATING_SITEMAP"] == "true")
   end
 
   def published?

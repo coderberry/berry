@@ -6,175 +6,174 @@ tldr: A recount of my experience at the Rails SaaS conference, a "next-generatio
 author: Eric Berry
 twitter_plugin: true
 ---
-<%= c_container do %>
-  <%= c_sitepress_article(ArticleModel.new(current_page)) do |article| %>
-    <%= c_markdown do %>
-      *Dear reader: this is a very long article without a specific target audience in mind. I hope you enjoy reading it as much as I did writing it.*
 
-      This morning I woke up and took an Uber ride from my hotel in Hollywood, California, to the Burbank Airport. I am headed back home.
+<%= c_sitepress_article(ArticleModel.new(current_page)) do |article| %>
+  <%= c_markdown do %>
+    *Dear reader: this is a very long article without a specific target audience in mind. I hope you enjoy reading it as much as I did writing it.*
 
-      Hollywood was the home of the inaugural [Rails SaaS Conference](https://railssaas.com/), a small, "next-generation" Ruby on Rails conference led by [Andrew Culver](https://twitter.com/andrewculver).
+    This morning I woke up and took an Uber ride from my hotel in Hollywood, California, to the Burbank Airport. I am headed back home.
 
-      Before I begin, I should mention to those who do not know me; I'm an extrovert and **I love people**. Steve, my Uber driver, was no exception.
+    Hollywood was the home of the inaugural [Rails SaaS Conference](https://railssaas.com/), a small, "next-generation" Ruby on Rails conference led by [Andrew Culver](https://twitter.com/andrewculver).
 
-      Steve and I laughed all the way to the airport as I listened to his stories and misadventures. He told me about when he picked up Lady Gaga to get a pack of cigarettes in the middle of the night so her manager wouldn't find out. She picked up her smokes, then they both just drove around while she smoked and they shared their favorite recipes. I learned about the time he fell into the role of Script Supervisor on the classic "Married with Children" TV series. And the time he and Waylon Jennings had a smoke together on a movie set. When Waylon was called back to be on camera, he yelled, "not until I finish my smokes with my friend Steve!". He even told me about working with Jared Leto (a peculiar, but kind-hearted guy with an odd sense of humor). He explained how Jared would help him get food from the food truck window (Steve uses a wheelchair and can't reach the window). They quickly set up the routine where Steve would find a table to eat at while Jared picked up the food.
+    Before I begin, I should mention to those who do not know me; I'm an extrovert and **I love people**. Steve, my Uber driver, was no exception.
 
-      I am sharing Steve's story because it is the perfect ending to what I consider the best and most unique Rails conference I've ever attended.
+    Steve and I laughed all the way to the airport as I listened to his stories and misadventures. He told me about when he picked up Lady Gaga to get a pack of cigarettes in the middle of the night so her manager wouldn't find out. She picked up her smokes, then they both just drove around while she smoked and they shared their favorite recipes. I learned about the time he fell into the role of Script Supervisor on the classic "Married with Children" TV series. And the time he and Waylon Jennings had a smoke together on a movie set. When Waylon was called back to be on camera, he yelled, "not until I finish my smokes with my friend Steve!". He even told me about working with Jared Leto (a peculiar, but kind-hearted guy with an odd sense of humor). He explained how Jared would help him get food from the food truck window (Steve uses a wheelchair and can't reach the window). They quickly set up the routine where Steve would find a table to eat at while Jared picked up the food.
 
-      I attended the conference with my good friend Nate Hopkins. You may know him from his open-source contributions, such as [Stimulus Reflex](https://docs.stimulusreflex.com/) and [CableReady](https://cableready.stimulusreflex.com/). Nate was kind enough to share some of my expenses which enabled me to go. But to be honest, had I known the value I would get from the conference, I definitely underpaid.
+    I am sharing Steve's story because it is the perfect ending to what I consider the best and most unique Rails conference I've ever attended.
 
-      We landed in Burbank on Wednesday afternoon. We were staying at the [Dream Hotel](https://www.dreamhotels.com/hollywood), a once-parking garage turned swanky Hollywood hot spot with a killer rooftop view and walls of NFTs for sale in the lobby. The hotel is located one block south of the famous Hollywood Boulevard, where you can find the "Walk of Fame", where you can find more than 2,700 brass stars embedded in the sidewalk.
-    <% end %>
+    I attended the conference with my good friend Nate Hopkins. You may know him from his open-source contributions, such as [Stimulus Reflex](https://docs.stimulusreflex.com/) and [CableReady](https://cableready.stimulusreflex.com/). Nate was kind enough to share some of my expenses which enabled me to go. But to be honest, had I known the value I would get from the conference, I definitely underpaid.
 
-    <%= c_image(path: "blog/rails-saas-conference/dream-hotel.jpg",
+    We landed in Burbank on Wednesday afternoon. We were staying at the [Dream Hotel](https://www.dreamhotels.com/hollywood), a once-parking garage turned swanky Hollywood hot spot with a killer rooftop view and walls of NFTs for sale in the lobby. The hotel is located one block south of the famous Hollywood Boulevard, where you can find the "Walk of Fame", where you can find more than 2,700 brass stars embedded in the sidewalk.
+  <% end %>
+
+  <%= c_image(path: "blog/rails-saas-conference/dream-hotel.jpg",
                 alt: "Dream Hotel, Hollywood, California",
                 caption: "[Dream Hotel, Hollywood, California](https://www.hyatt.com/en-US/hotel/california/dream-hollywood/laxdz)") %>
 
-    <%= c_markdown do %>
-      As Nate can tell you, I love to experience the local culture wherever I go. Many people know me as somewhat of a novelty seeker. While in Japan, I rode the Shinkansen (bullet train) from Osaka to Tokyo and found myself at a secret kink club. In Amsterdam, I walked the streets of the Red Light district, drank fresh Heineken, and smoked at a "coffee shop" (I'm not even sure they sold coffee). In Portugal, I painted tiles inside a monastery and stayed at a palace on the beach. If we were to video chat, you would find a wall of baseball hats behind my desk, each carrying memories of experiences worldwide. The hats represent _The Adventures of Eric Berry_, collected from places I've visited. I can look at each hat and re-live those memories in my mind. It's my own personal _Wayback Machine_.
-    <% end %>
+  <%= c_markdown do %>
+    As Nate can tell you, I love to experience the local culture wherever I go. Many people know me as somewhat of a novelty seeker. While in Japan, I rode the Shinkansen (bullet train) from Osaka to Tokyo and found myself at a secret kink club. In Amsterdam, I walked the streets of the Red Light district, drank fresh Heineken, and smoked at a "coffee shop" (I'm not even sure they sold coffee). In Portugal, I painted tiles inside a monastery and stayed at a palace on the beach. If we were to video chat, you would find a wall of baseball hats behind my desk, each carrying memories of experiences worldwide. The hats represent _The Adventures of Eric Berry_, collected from places I've visited. I can look at each hat and re-live those memories in my mind. It's my own personal _Wayback Machine_.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/hats.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/hats.jpg",
                 alt: "Each hat tells a story of another adventure",
                 caption: "Each hat tells a story of another adventure") %>
 
-    <%= c_markdown do %>
-      This was my first time in Hollywood since I was young, so I wanted to take full advantage of the opportunity. Nate and I decided to explore the area. I won't share all of our experiences during the trip, but one really stands out to me as being uniquely _"Hollywood"_. From our hotel window, we could see the giant Scientology sign on top of a 12-story brick building. I knew a little bit about the religion from Netflix documentaries and a visit to their spiritual center in Clearwater, Florida. The possibility of seeing the inside of the super-secret celebrity center which Tom Cruise called his 2nd home was too much for me to resist.
-    <% end %>
+  <%= c_markdown do %>
+    This was my first time in Hollywood since I was young, so I wanted to take full advantage of the opportunity. Nate and I decided to explore the area. I won't share all of our experiences during the trip, but one really stands out to me as being uniquely _"Hollywood"_. From our hotel window, we could see the giant Scientology sign on top of a 12-story brick building. I knew a little bit about the religion from Netflix documentaries and a visit to their spiritual center in Clearwater, Florida. The possibility of seeing the inside of the super-secret celebrity center which Tom Cruise called his 2nd home was too much for me to resist.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/scientology-building.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/scientology-building.jpg",
                 alt: "Nate and I walking the streets of Hollywood",
                 caption: "Nate and I walking the streets of Hollywood") %>
 
-    <%= c_markdown do %>
-      Of course, we didn't expect to be able to get in. While we were walking in front of the building (which I later found was the back), we were greeted by two enthusiastic young women with invitations to come in and look around. The two reminded me of the time I spent as a missionary for the Mormon church years ago. Nate was a bit wary, but as I mentioned, I love unique experiences, and this definitely qualified. I was all in. _To the tour!_
-    <% end %>
+  <%= c_markdown do %>
+    Of course, we didn't expect to be able to get in. While we were walking in front of the building (which I later found was the back), we were greeted by two enthusiastic young women with invitations to come in and look around. The two reminded me of the time I spent as a missionary for the Mormon church years ago. Nate was a bit wary, but as I mentioned, I love unique experiences, and this definitely qualified. I was all in. _To the tour!_
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/scientology-entrance.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/scientology-entrance.jpg",
                 alt: "Nate & I visiting the L. Ron Hubbard Life Exhibition",
                 caption: "Nate & I visiting the [L. Ron Hubbard Life Exhibition](https://www.freedommag.org/english/la/issue02/page15a.html)") %>
 
-    <%= c_markdown do %>
-      Think what you will about Scientology and its founder, but they know how to put on one hell of a tour. I was dazzled by a bigger-than-life-size statue of an alien monster and what I believe to be its human servant. We saw unusual paintings depicting the evolution of Mr. Hubbard's life-long education and learned how Scientology became a religion. There were magazines and books galore that Mr. Hubbard either contributed to, or wrote throughout his life. About halfway through the tour, I turned a corner and saw what I was hoping to find: a working [E-Meter](https://en.wikipedia.org/wiki/E-meter)! With a super goofy grin, I grabbed the metal cans with each hand and watched as the tour guide, an auditor-in-training, walked me through how it works. It was a blast! At the end of the tour, we stood in front of a giant curtain that must have been at least 15 feet tall and 20 feet wide.
-    <% end %>
+  <%= c_markdown do %>
+    Think what you will about Scientology and its founder, but they know how to put on one hell of a tour. I was dazzled by a bigger-than-life-size statue of an alien monster and what I believe to be its human servant. We saw unusual paintings depicting the evolution of Mr. Hubbard's life-long education and learned how Scientology became a religion. There were magazines and books galore that Mr. Hubbard either contributed to, or wrote throughout his life. About halfway through the tour, I turned a corner and saw what I was hoping to find: a working [E-Meter](https://en.wikipedia.org/wiki/E-meter)! With a super goofy grin, I grabbed the metal cans with each hand and watched as the tour guide, an auditor-in-training, walked me through how it works. It was a blast! At the end of the tour, we stood in front of a giant curtain that must have been at least 15 feet tall and 20 feet wide.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/scientology-finale.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/scientology-finale.jpg",
                 alt: "The wall of awards and recognitions",
                 caption: "The wall of awards and recognitions") %>
 
-    <%= c_markdown do %>
-      At the push of a button, the curtains opened, revealing [awards and recognitions](https://www.lronhubbard.org/awards-and-recognitions/) given to Mr. Hubbard throughout his life. Then the walls parted to reveal another layer of awards. Then another. Then another. Then another. Finally, the walls opened just enough to show a 10 foot tall photograph of Mr. Hubbard himself. There were lights, music, voice narrations, and what I can only call "_pizzazz_."
+  <%= c_markdown do %>
+    At the push of a button, the curtains opened, revealing [awards and recognitions](https://www.lronhubbard.org/awards-and-recognitions/) given to Mr. Hubbard throughout his life. Then the walls parted to reveal another layer of awards. Then another. Then another. Then another. Finally, the walls opened just enough to show a 10 foot tall photograph of Mr. Hubbard himself. There were lights, music, voice narrations, and what I can only call "_pizzazz_."
 
-      I love Hollywood!
+    I love Hollywood!
 
-      Once we were back at the hotel, the other attendees started to roll in. If you've never attended a Ruby (or any tech) conference before, they are primarily focused around the programming language or framework. People would come from all over the world to attend. Together, they share coding experiences, teach technical concepts, discuss new ideas, and celebrate a shared love of the technology that many have adopted as an extension of themselves. Earlier this year, I was able to attend such a conference. The [Sin City Ruby Conf](https://www.sincityruby.com/) (held in Las Vegas) was where I made some life-long friends and learned a ton about honing my craft. **I always learn a lot at these conferences, but the best part is always the people.**
+    Once we were back at the hotel, the other attendees started to roll in. If you've never attended a Ruby (or any tech) conference before, they are primarily focused around the programming language or framework. People would come from all over the world to attend. Together, they share coding experiences, teach technical concepts, discuss new ideas, and celebrate a shared love of the technology that many have adopted as an extension of themselves. Earlier this year, I was able to attend such a conference. The [Sin City Ruby Conf](https://www.sincityruby.com/) (held in Las Vegas) was where I made some life-long friends and learned a ton about honing my craft. **I always learn a lot at these conferences, but the best part is always the people.**
 
-      I wasn't sure what to expect from the conference claiming to be "next-generation." Still, I started to notice some pretty significant differences.
+    I wasn't sure what to expect from the conference claiming to be "next-generation." Still, I started to notice some pretty significant differences.
 
-      The first difference I found were the bouncers at the event. I thought I knew what bouncers looked like, but these guys were giants. In a town I soon found out to be full of crazy people _(I was almost stabbed)_, I admit that I was comforted by having an NFL linebacker watching our back.
+    The first difference I found were the bouncers at the event. I thought I knew what bouncers looked like, but these guys were giants. In a town I soon found out to be full of crazy people _(I was almost stabbed)_, I admit that I was comforted by having an NFL linebacker watching our back.
 
-      The main room had a professional camera crew set up and ready to record. Based on my experience as an extra in the movie [Waffle Street](https://www.youtube.com/watch?v=nKww2V5PeM0), I knew this crew was legit. I later learned that Andrew hired the film crew to create a professional video archive that will be available to the Rails community. At times in the middle of the talks, we would hear "_hold up_". The speaker would pause as Paule, my new (and only) favorite makeup artist, dabbed the sweat and shine from their face. Paule even took the time to make me even more handsome (is it possible? :-P) with a coat of makeup that I couldn't imagine wearing back home.
-    <% end %>
+    The main room had a professional camera crew set up and ready to record. Based on my experience as an extra in the movie [Waffle Street](https://www.youtube.com/watch?v=nKww2V5PeM0), I knew this crew was legit. I later learned that Andrew hired the film crew to create a professional video archive that will be available to the Rails community. At times in the middle of the talks, we would hear "_hold up_". The speaker would pause as Paule, my new (and only) favorite makeup artist, dabbed the sweat and shine from their face. Paule even took the time to make me even more handsome (is it possible? :-P) with a coat of makeup that I couldn't imagine wearing back home.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/hollywood-backstage.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/hollywood-backstage.jpg",
                 alt: "Paule and I prepping for the headshots",
                 caption: "Paule and I prepping for the headshots") %>
 
-    <%= c_markdown do %>
-      Ok.. Enough back story. Let's get to the sessions.
+  <%= c_markdown do %>
+    Ok.. Enough back story. Let's get to the sessions.
 
-      I believe you need to experience the talks for yourself, so I will not dig into the content of the talks. Make sure to follow [@RailsSaaS](https://twitter.com/railssaas) to be notified once the videos are released. I can, however, share that they were _very different_ from the typical "tech talk." Here are some of the highlights:
+    I believe you need to experience the talks for yourself, so I will not dig into the content of the talks. Make sure to follow [@RailsSaaS](https://twitter.com/railssaas) to be notified once the videos are released. I can, however, share that they were _very different_ from the typical "tech talk." Here are some of the highlights:
 
-      [Nadia Odunayo](https://twitter.com/nodunayo) (founder of [The StoryGraph](https://www.thestorygraph.com/)) walked us through _three rules for building your business_. Her talk was inspiring to say the least and provided some strong, simple guidelines on how to become successful as a one-person team. _You can watch her talk [here](https://www.youtube.com/watch?v=efCI1ByPT5s)._
+    [Nadia Odunayo](https://twitter.com/nodunayo) (founder of [The StoryGraph](https://www.thestorygraph.com/)) walked us through _three rules for building your business_. Her talk was inspiring to say the least and provided some strong, simple guidelines on how to become successful as a one-person team. _You can watch her talk [here](https://www.youtube.com/watch?v=efCI1ByPT5s)._
 
-      [Joe Masilotti](https://twitter.com/joemasilotti) (founder of [RailsDevs.com](http://railsdevs.com/) and often considered the "nicest guy in Ruby") spoke about his experience as a junior developer. He shared stories of others who fought the challenge of being a new Ruby engineer in a world that focuses on only hiring seniors. _You can watch his talk [here](https://www.youtube.com/watch?v=NZionAE-Tj0)._
+    [Joe Masilotti](https://twitter.com/joemasilotti) (founder of [RailsDevs.com](http://railsdevs.com/) and often considered the "nicest guy in Ruby") spoke about his experience as a junior developer. He shared stories of others who fought the challenge of being a new Ruby engineer in a world that focuses on only hiring seniors. _You can watch his talk [here](https://www.youtube.com/watch?v=NZionAE-Tj0)._
 
-      [Todd Dickerson](https://twitter.com/todddickerson/) (Co-founder and CTO of [ClickFunnels](https://www.clickfunnels.com/)) spoke about the recent re-write of ClickFunnels in Ruby on Rails. ClickFunnels is one of the top 50 most visited websites in the world. Their site gets more traffic than Reddit! I was blown away when I discovered that their engineering team is less than 50 people. He told us the secrets to their success and how it's possible to stay lean while moving crazy fast. I won't tell you these secrets, but [Bullet Train](https://bullettrain.co/) plays a huge part.
+    [Todd Dickerson](https://twitter.com/todddickerson/) (Co-founder and CTO of [ClickFunnels](https://www.clickfunnels.com/)) spoke about the recent re-write of ClickFunnels in Ruby on Rails. ClickFunnels is one of the top 50 most visited websites in the world. Their site gets more traffic than Reddit! I was blown away when I discovered that their engineering team is less than 50 people. He told us the secrets to their success and how it's possible to stay lean while moving crazy fast. I won't tell you these secrets, but [Bullet Train](https://bullettrain.co/) plays a huge part.
 
-      [Don Pottinger](https://twitter.com/donpottinger) (co-founder of [LanguaTalk](https://languatalk.com/)) was also a massive inspiration to me. Before I get into explaining the reason, let me first tell you a little about my years running [CodeFund](https://github.com/gitcoinco/code_fund_ads). In 2017, Nate and I started this company (previously named Code Sponsor). It was an ethical advertising platform (100% open source with zero tracking) that generated over USD 1M for open-source maintainers all over the world. Nate, along with [Andrew Mason](https://twitter.com/andrewmcodes), did most of the engineering, [Justin Dorfman](https://twitter.com/jdorfman) ran the Podcast network and helped manage our publishers, and I filled in the gaps: Sales, Marketing, Customer Service, Financial Distributions, etc. It was like being dropped into the deep end of the pool where I had to learn fast or fail.
-    <% end %>
+    [Don Pottinger](https://twitter.com/donpottinger) (co-founder of [LanguaTalk](https://languatalk.com/)) was also a massive inspiration to me. Before I get into explaining the reason, let me first tell you a little about my years running [CodeFund](https://github.com/gitcoinco/code_fund_ads). In 2017, Nate and I started this company (previously named Code Sponsor). It was an ethical advertising platform (100% open source with zero tracking) that generated over USD 1M for open-source maintainers all over the world. Nate, along with [Andrew Mason](https://twitter.com/andrewmcodes), did most of the engineering, [Justin Dorfman](https://twitter.com/jdorfman) ran the Podcast network and helped manage our publishers, and I filled in the gaps: Sales, Marketing, Customer Service, Financial Distributions, etc. It was like being dropped into the deep end of the pool where I had to learn fast or fail.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/dream-team.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/dream-team.jpg",
                 alt: "Myself, Andrew Mason, and Nate Hopkins at the Sin City Ruby Conf",
                 caption: "Myself, [Andrew Mason](https://x.com/andrewmcodes), and [Nate Hopkins](https://x.com/hopsoft) at the [Sin City Ruby Conf](https://www.sincityruby.com)") %>
 
-    <%= c_markdown do %>
-      After over 3+ years of trying to make CodeFund a success, we eventually shut it down in June 2020. This was a tough and emotional decision. I knew if I were to continue, it would require sacrificing my relationship with my family. I couldn't be a good husband and father while spending almost all my waking hours thinking about the business. I chose family and vowed never to rerun another company.
+  <%= c_markdown do %>
+    After over 3+ years of trying to make CodeFund a success, we eventually shut it down in June 2020. This was a tough and emotional decision. I knew if I were to continue, it would require sacrificing my relationship with my family. I couldn't be a good husband and father while spending almost all my waking hours thinking about the business. I chose family and vowed never to rerun another company.
 
-      What intrigued me about Don is that his background is similar to mine. He works at Google full-time and has a wife and children (more and younger than mine). Don had the itch to start a company but still required good health insurance (an American dilemma maybe?). To do so, he still needed to keep his day job.. which he didn't want to leave.
+    What intrigued me about Don is that his background is similar to mine. He works at Google full-time and has a wife and children (more and younger than mine). Don had the itch to start a company but still required good health insurance (an American dilemma maybe?). To do so, he still needed to keep his day job.. which he didn't want to leave.
 
-      In a fireside chat with Andrew, Don discussed how he could balance being both an _entrepreneur_ and _working full-time_ at a company with some pretty high demands. I was on the edge of my seat. I finally found someone like me. I love my [day job](https://orbit.love/) and have no intent to leave and start my own thing. However, I'm a 40-something and am still utterly dependent on my employers for salary with no side revenue coming in. Perhaps this is what aging developers start thinking about when their hair turns gray. Don not only gave me the confidence to get started but stands as an example of success. _His interview is a must-watch!_
+    In a fireside chat with Andrew, Don discussed how he could balance being both an _entrepreneur_ and _working full-time_ at a company with some pretty high demands. I was on the edge of my seat. I finally found someone like me. I love my [day job](https://orbit.love/) and have no intent to leave and start my own thing. However, I'm a 40-something and am still utterly dependent on my employers for salary with no side revenue coming in. Perhaps this is what aging developers start thinking about when their hair turns gray. Don not only gave me the confidence to get started but stands as an example of success. _His interview is a must-watch!_
 
-      The first day wrapped with a talk given by [Saron Yitbarek](https://twitter.com/saronyitbarek). You may know her as the founder of [CodeNewbie](https://community.codenewbie.org/). This talk was _not_ technical, nor was it providing ways how to succeed as a business. It was a raw, unapologetic, fearless plead to the developer community to shift how we consider collecting data. While she spoke about the challenges she and her husband faced, you could hear a pin drop.
+    The first day wrapped with a talk given by [Saron Yitbarek](https://twitter.com/saronyitbarek). You may know her as the founder of [CodeNewbie](https://community.codenewbie.org/). This talk was _not_ technical, nor was it providing ways how to succeed as a business. It was a raw, unapologetic, fearless plead to the developer community to shift how we consider collecting data. While she spoke about the challenges she and her husband faced, you could hear a pin drop.
 
-      The next day, I listened to a talk given by [Evan Phoenix](https://twitter.com/evanphx). If you don't know Evan (which you really should), he is a pioneer in the Ruby on Rails community, starting his Ruby career in 2003. I started 5 years later, at which we met at my first Ruby conference, the Mountain West Ruby Conf.
+    The next day, I listened to a talk given by [Evan Phoenix](https://twitter.com/evanphx). If you don't know Evan (which you really should), he is a pioneer in the Ruby on Rails community, starting his Ruby career in 2003. I started 5 years later, at which we met at my first Ruby conference, the Mountain West Ruby Conf.
 
-      In [his talk](https://www.youtube.com/watch?v=sxC4DhKGVkM) from 2008, Evan shared his experiences in building communities. I learned new concepts like "_No [contribution] is too small_" and "_Every contributor has worth._" These were new concepts to me, having come from the Java community. Through his talk and others that day, I was introduced to what a community really is. I was hooked.
-    <% end %>
+    In [his talk](https://www.youtube.com/watch?v=sxC4DhKGVkM) from 2008, Evan shared his experiences in building communities. I learned new concepts like "_No [contribution] is too small_" and "_Every contributor has worth._" These were new concepts to me, having come from the Java community. Through his talk and others that day, I was introduced to what a community really is. I was hooked.
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/mwrc-conf.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/mwrc-conf.jpg",
                 alt: "There I am, goatee and all!",
                 caption: "There I am, goatee and all!") %>
 
-    <%= c_markdown do %>
-      14 years later, I was once again moved by the journey Evan took us on. His talk was heartfelt and chock full of nostalgia. The sense of belonging was overwhelming as I eagerly listened to him talk about... you guessed it: **community**.
+  <%= c_markdown do %>
+    14 years later, I was once again moved by the journey Evan took us on. His talk was heartfelt and chock full of nostalgia. The sense of belonging was overwhelming as I eagerly listened to him talk about... you guessed it: **community**.
 
-      Later that day, [Jason Charnes](https://twitter.com/jmcharnes) got up on stage. You may not know Jason by appearance, but you likely know his voice. He is a co-host on the treasure-of-a-podcast [Remote Ruby](https://remoteruby.com/). Jason is, for lack of a better word, charming. His energy is contagious, and he is _just so freaking nice_. When I met him for the first time at Sin City Ruby, he greeted me with a booming "Hey Eric! I'm so glad to finally meet you!" followed by a huge hug. That's Jason. I love that guy!
+    Later that day, [Jason Charnes](https://twitter.com/jmcharnes) got up on stage. You may not know Jason by appearance, but you likely know his voice. He is a co-host on the treasure-of-a-podcast [Remote Ruby](https://remoteruby.com/). Jason is, for lack of a better word, charming. His energy is contagious, and he is _just so freaking nice_. When I met him for the first time at Sin City Ruby, he greeted me with a booming "Hey Eric! I'm so glad to finally meet you!" followed by a huge hug. That's Jason. I love that guy!
 
-      Jason, like Evan, took us on a journey through time. Until then, I had been taking rigorous notes on my laptop. For this talk, I put away my computer and let him lead me on a journey down memory lane. He shared stories and events that I remember from back in the Rails 1.x days. I had no idea this conference would impact me in this manner. As he spoke, I wondered if the new Ruby developers of today would have similar nostalgic feelings in years to come. I imagined them sharing stories of the old days before Hotwire came onto the scene, and "Reactive Rails" wasn't a thing.
+    Jason, like Evan, took us on a journey through time. Until then, I had been taking rigorous notes on my laptop. For this talk, I put away my computer and let him lead me on a journey down memory lane. He shared stories and events that I remember from back in the Rails 1.x days. I had no idea this conference would impact me in this manner. As he spoke, I wondered if the new Ruby developers of today would have similar nostalgic feelings in years to come. I imagined them sharing stories of the old days before Hotwire came onto the scene, and "Reactive Rails" wasn't a thing.
 
-      I want to talk a little about the experiences I had outside of the official conf conference rooms. In particular, I want to talk about what made this conference extra-special: **_the people_**.
+    I want to talk a little about the experiences I had outside of the official conf conference rooms. In particular, I want to talk about what made this conference extra-special: **_the people_**.
 
-      I think I'm somewhat of a unique member of this community. I'm an extrovert who is re-energized by being surrounded by people. However, I also often suffer from social anxiety. To overcome this fear, I force myself to initiate conversations with others, focusing on learning about them. What do they do? What do they enjoy? Family? Favorite hobbies? Challenges? Experiences? That sort of stuff. This works really well and takes the pressure off you.
+    I think I'm somewhat of a unique member of this community. I'm an extrovert who is re-energized by being surrounded by people. However, I also often suffer from social anxiety. To overcome this fear, I force myself to initiate conversations with others, focusing on learning about them. What do they do? What do they enjoy? Family? Favorite hobbies? Challenges? Experiences? That sort of stuff. This works really well and takes the pressure off you.
 
-      These impromptu conversations are the primary reason why this conference was so special to me. I'd like to introduce you to a few of them.
+    These impromptu conversations are the primary reason why this conference was so special to me. I'd like to introduce you to a few of them.
 
-      I met [Tom Rossi](https://twitter.com/tomrossi7) on the first day in the hotel lobby. Tom is a dapper gray-haired fellow with a swagger that I imagine comes as a result of having both success and humility. Until then, I had never heard of Tom or his company [BuzzSprout](https://www.buzzsprout.com/). Tom shared with me stories of how he built the _largest Podcast network in the world_, with over 100,000 active podcasts, using Ruby on Rails. Tom grinned as he told me that the whole app was built by two people: himself and his partner Kevin Finn. This _dream-team_ partnership has driven almost all of Tom's successes with [5 companies in total](https://www.higherpixels.com/)!
+    I met [Tom Rossi](https://twitter.com/tomrossi7) on the first day in the hotel lobby. Tom is a dapper gray-haired fellow with a swagger that I imagine comes as a result of having both success and humility. Until then, I had never heard of Tom or his company [BuzzSprout](https://www.buzzsprout.com/). Tom shared with me stories of how he built the _largest Podcast network in the world_, with over 100,000 active podcasts, using Ruby on Rails. Tom grinned as he told me that the whole app was built by two people: himself and his partner Kevin Finn. This _dream-team_ partnership has driven almost all of Tom's successes with [5 companies in total](https://www.higherpixels.com/)!
 
-      Tom shared with me his pattern for success. He and Kevin would find a need, then fill it. They would extract a part of their product and built a new company around it. Rinse and repeat. We chatted about business ideas over dinner and how he learned the _right_ and _wrong_ business to build. **_What was this guy doing at a Ruby conference? Oh ya! SaaS!_** This conference drew a different sort of community member... the one I've been trying to learn from and become for a long time.
+    Tom shared with me his pattern for success. He and Kevin would find a need, then fill it. They would extract a part of their product and built a new company around it. Rinse and repeat. We chatted about business ideas over dinner and how he learned the _right_ and _wrong_ business to build. **_What was this guy doing at a Ruby conference? Oh ya! SaaS!_** This conference drew a different sort of community member... the one I've been trying to learn from and become for a long time.
 
-      I also had the great pleasure of meeting the [Evil Martians](https://evilmartians.com/), [Alexander Tishchenko](https://mobile.twitter.com/evilmartians) and [Vladimir Dementyev](https://twitter.com/palkan_tula). When I first met Alexander, I was reminded of Dr. Wario, except skinnier and less evil (irony?). He and Vladimir are two of the most intelligent people I've ever met. They are the brains behind technologies such as [Overmind](https://evilmartians.com/opensource/overmind), [ImgProxy](https://evilmartians.com/products/imgproxy), and [AnyCable](https://evilmartians.com/products/anycable). They also are some of the **best Ruby/Rails bloggers** I know. Not only were they humble, but they were hilarious and a joy to be around. Alexander shared stories with me about how he started Evil Martians, the logo's origins, and his late gorgeous black cat (RIP, little kitty!).
-    <% end %>
+    I also had the great pleasure of meeting the [Evil Martians](https://evilmartians.com/), [Alexander Tishchenko](https://mobile.twitter.com/evilmartians) and [Vladimir Dementyev](https://twitter.com/palkan_tula). When I first met Alexander, I was reminded of Dr. Wario, except skinnier and less evil (irony?). He and Vladimir are two of the most intelligent people I've ever met. They are the brains behind technologies such as [Overmind](https://evilmartians.com/opensource/overmind), [ImgProxy](https://evilmartians.com/products/imgproxy), and [AnyCable](https://evilmartians.com/products/anycable). They also are some of the **best Ruby/Rails bloggers** I know. Not only were they humble, but they were hilarious and a joy to be around. Alexander shared stories with me about how he started Evil Martians, the logo's origins, and his late gorgeous black cat (RIP, little kitty!).
+  <% end %>
 
-    <%= c_image(path: "blog/rails-saas-conference/evil-geniuses.jpg",
+  <%= c_image(path: "blog/rails-saas-conference/evil-geniuses.jpg",
                 alt: "Alexander Tishchenko and Vladimir Dementyev, Evil Martians",
                 caption: "[Alexander Tishchenko](https://x.com/at_martian) and [Vladimir Dementyev](https://x.com/palkan_tula), Evil Martians") %>
 
-    <%= c_markdown do %>
-      I also had the great fortune to meet two amazing humans: [Abe Storey](https://twitter.com/abe_storey) and [Jacqueline Lum](https://twitter.com/jacqlum). Together we drank Star Wars-themed cocktails at the Scum & Villainy Cantina. As always, I wanted to know all I could when I met them. We discussed their company, [Entri](https://www.entri.com/), and the challenges of marketing a UX solution to developers. We then "got real" and discussed topics that were very personal to us. It was a genuine connection that I believe has built the foundation for a life-long friendship. If your company deals with DNS registry as part of your app, [check them out](https://www.entri.com/).
+  <%= c_markdown do %>
+    I also had the great fortune to meet two amazing humans: [Abe Storey](https://twitter.com/abe_storey) and [Jacqueline Lum](https://twitter.com/jacqlum). Together we drank Star Wars-themed cocktails at the Scum & Villainy Cantina. As always, I wanted to know all I could when I met them. We discussed their company, [Entri](https://www.entri.com/), and the challenges of marketing a UX solution to developers. We then "got real" and discussed topics that were very personal to us. It was a genuine connection that I believe has built the foundation for a life-long friendship. If your company deals with DNS registry as part of your app, [check them out](https://www.entri.com/).
 
-      To wrap things up, I want to briefly discuss [Andrew Culver](https://twitter.com/andrewculver) and his open-source project, [Bullet Train](https://bullettrain.co/).
+    To wrap things up, I want to briefly discuss [Andrew Culver](https://twitter.com/andrewculver) and his open-source project, [Bullet Train](https://bullettrain.co/).
 
-      If you haven't met Andrew yet (and I hope you get the opportunity someday) he is a natural leader. His style, charisma, and wit were second-to-none. Andrew is one of those people you look at and think, "I wish I had his many atributes." Andrew has that entrepreneurial spirit you often see in movies like _The Wolf of Wall Street_ (while maintaining ethics and without all the drugs).
+    If you haven't met Andrew yet (and I hope you get the opportunity someday) he is a natural leader. His style, charisma, and wit were second-to-none. Andrew is one of those people you look at and think, "I wish I had his many atributes." Andrew has that entrepreneurial spirit you often see in movies like _The Wolf of Wall Street_ (while maintaining ethics and without all the drugs).
 
-      Andrew reminds me a lot of my brother, a "devpreneur" who would often ask me, "why aren't you and Nate rich yet?". I don't think that question really sunk in until I listened to Andrew talk about how he operates. Andrew creates code with one purpose: **to build value**. He doesn't worry about using the correct design pattern nor re-invent the wheel, as I have done countless times over my career. Instead, Andrew took his knowledge and created tools to build with. With those tools, he made better tools. And eventually, he built **Bullet Train**, a SaaS Framework for Rails.
+    Andrew reminds me a lot of my brother, a "devpreneur" who would often ask me, "why aren't you and Nate rich yet?". I don't think that question really sunk in until I listened to Andrew talk about how he operates. Andrew creates code with one purpose: **to build value**. He doesn't worry about using the correct design pattern nor re-invent the wheel, as I have done countless times over my career. Instead, Andrew took his knowledge and created tools to build with. With those tools, he made better tools. And eventually, he built **Bullet Train**, a SaaS Framework for Rails.
 
-      Earlier this year, at the Sin City Ruby conference, he announced that the project was going open source. I didn't realize at that time what a big deal this was.
+    Earlier this year, at the Sin City Ruby conference, he announced that the project was going open source. I didn't realize at that time what a big deal this was.
 
-      I have been a Software Engineer for over half my life. I've piggybacked off others with an entrepreneurial spirit like Andrew's throughout my career. I've helped build other people's dreams and made them independently wealthy. I've built crazy, complicated platforms that became the core of their businesses which are still running today. Why hadn't I considered doing this myself? I didn't think I could.
+    I have been a Software Engineer for over half my life. I've piggybacked off others with an entrepreneurial spirit like Andrew's throughout my career. I've helped build other people's dreams and made them independently wealthy. I've built crazy, complicated platforms that became the core of their businesses which are still running today. Why hadn't I considered doing this myself? I didn't think I could.
 
-      That all changed at this conference.
+    That all changed at this conference.
 
-      I no longer believe I am unable or insufficient. I no longer believe that it takes the best idea, the best team, and the most funding to build a successful business. **I've been waiting for the opportunity to fall into my lap, but it's been there all along**. I now know people who have done this and are willing to help me. I now know the three critical parts of a successful business (watch Nadia's talk). **I can do this in my free time without sacrificing my family or job.**
+    I no longer believe I am unable or insufficient. I no longer believe that it takes the best idea, the best team, and the most funding to build a successful business. **I've been waiting for the opportunity to fall into my lap, but it's been there all along**. I now know people who have done this and are willing to help me. I now know the three critical parts of a successful business (watch Nadia's talk). **I can do this in my free time without sacrificing my family or job.**
 
-      I'll end with a tweet I shared at the end of the conference.
-    <% end %>
+    I'll end with a tweet I shared at the end of the conference.
+  <% end %>
 
-    <%= c_tweet(author: "Eric Berry",
+  <%= c_tweet(author: "Eric Berry",
                 handle: "@coderberry",
                 link: "https://twitter.com/coderberry/status/1578540742288371714?ref_src=twsrc%5Etfw",
                 date_published: "October 8, 2022") do %>
-      <%= c_markdown do %>
-        The [@RailsSaaS](https://twitter.com/RailsSaaS?ref_src=twsrc%5Etfw] conference was by far the most
-        impactful one I've attended. Not only did I learn about amazing tools to speed up development, but I learned
-        from some of the most successful leaders in our industry.
-      <% end %>
-    <% end %>
-
     <%= c_markdown do %>
-      Feel free to reach out to me anytime. My [**Twitter** DM's](https://x.com/coderberry) are always open.
-
-      Eric
+      The [@RailsSaaS](https://twitter.com/RailsSaaS?ref_src=twsrc%5Etfw] conference was by far the most
+      impactful one I've attended. Not only did I learn about amazing tools to speed up development, but I learned
+      from some of the most successful leaders in our industry.
     <% end %>
+  <% end %>
+
+  <%= c_markdown do %>
+    Feel free to reach out to me anytime. My [**Twitter** DM's](https://x.com/coderberry) are always open.
+
+    Eric
   <% end %>
 <% end %>

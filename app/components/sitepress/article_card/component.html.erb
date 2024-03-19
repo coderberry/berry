@@ -5,6 +5,10 @@
       <%= helpers.inline_svg_tag "calendar.svg", class: "fill-slate-300 w-4 h-4 mr-2 inline-block" %>
       <%= article.publish_date %>
     <% end %>
+  <% else %>
+    <%= tag.div class: css("draft.wrapper") do %>
+      Draft - Is not visible to the public
+    <% end %>
   <% end %>
   <%= tag.p article.tldr, class: css("tldr") %>
 <% end %>
