@@ -8,3 +8,8 @@
 
 @import "../css/rouge/monokai.css";
 
+@layer components {
+  .debug {
+    @apply border border-red-200;
+  }
+}
