@@ -1,0 +1,14 @@
+<%= turbo_frame_tag :demo_frame do %>
+  <div class="flex-1">
+    <%= tag.pre(
+          render_source_code(
+            read_source(
+              @relative_path,
+              erb: @language == :erb
+            ),
+            language: @language
+          )
+        ) %>
+  </div>
+<% end %>
+

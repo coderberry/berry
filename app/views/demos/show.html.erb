@@ -1,3 +1,30 @@
-<%= turbo_frame_tag :tab_contents do %>
-  <%= render partial: "demos/#{@name}/#{@variant}" %>
-<% end %>
+<div class="grid grid-cols-4 w-full mb-8">
+  <div class="col-span-3">
+    <%= tag.div(
+      class: "relative border-gray-700 rounded-md border-y border-x",
+      data: {
+        controller: "demo",
+        # demo_target: "tabs_container",
+        action: "demo:console-event->demo#appendConsoleEvent"
+      }
+    ) do %>
+      <div class="flex flex-col border border-gray-700 bg-gray-950 rounded-md divide-y divide-gray-700">
+
+        <!-- Render the tabs within the turbo frame -->
+        <%= turbo_frame_tag :demo_tabs,
+                            src: demo_tabs_path(
+                              name: @demo.name,
+                              variant: @demo.variant,
+                              active_tab_id: @demo.active_tab.id
+                            ),
+                            data: { demo_target: "tabs" } %>
+
+        <!-- Render the frame contents within the turbo frame -->
+        <%= turbo_frame_tag :demo_frame, src: @demo.active_tab.path, data: { demo_target: "frame" } %>
+
+        <%= render "console" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

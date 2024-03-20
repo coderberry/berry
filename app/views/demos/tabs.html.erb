@@ -1,0 +1,25 @@
+<%= turbo_frame_tag :demo_tabs, data: { demo_target: "tabs" } do %>
+  <div class="flex-shrink flex flew-row justify-between">
+    <ul class="flex text-sm font-medium text-center text-gray-300">
+      <% @demo.tabs.each do |tab| %>
+        <%= tag.li(
+          class: token_list("group", "tab-active": tab.active?),
+          data: {
+            demo_target: "tab",
+            tab_id: tab.id,
+            src: tab.path
+          }
+        ) do %>
+          <%= tag.button tab.label,
+                         type: "button",
+                         class: tab.tw_classes,
+                         data: {
+                           action: "demo#selectTab",
+                           active_tab_tabs_path: demo_tabs_path(name: tab.name, variant: tab.variant, active_tab_id: tab.id),
+                           active_tab_frame_path: tab.path.html_safe
+                         } %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

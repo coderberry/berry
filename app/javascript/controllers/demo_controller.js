@@ -2,36 +2,44 @@ import {Controller} from "@hotwired/stimulus"
 
 // Connects to data-controller="demo"
 export default class extends Controller {
-  static targets = ["container", "tab", "consoleWrapper", "console", "frame"]
+  static targets = ["tabs", "frame", "console", "consoleWrapper"]
   static values = {active: String}
 
   connect() {
     this.clearConsoleEvents()
+    console.log("tabs", this.tabsTarget)
+    console.log("frame", this.frameTarget)
+    console.log("console", this.consoleTarget)
+    console.log("consoleWrapper", this.consoleWrapperTarget)
   }
 
-  copyToClipboard(event) {
-    event.preventDefault()
-  }
-
+  // Click handler for tab selection.
+  // This will re-render the tabs and the frame
   selectTab(event) {
-    event.preventDefault()
+    console.log('New tabs src', event.target.dataset.activeTabTabsPath)
+    this.tabsTarget.src = event.target.dataset.activeTabTabsPath
 
-    const button = event.target
-    const li = button.parentElement
+    console.log('New frame src', event.target.dataset.activeTabFramePath)
+    this.frameTarget.src = event.target.dataset.activeTabFramePath
 
-    this.tabTargets.forEach((tab) => tab.classList.remove('active'))
-
-    this.activeValue = li.dataset.tabId
-    li.classList.add('active')
-
-    if (this.activeValue === 'tab-demo') {
-      this.clearConsoleEvents()
-      this.consoleWrapperTarget.classList.remove('hidden')
-    } else {
-      this.consoleWrapperTarget.classList.add('hidden')
-    }
-
-    this.frameTarget.src = li.dataset.src
+    // event.preventDefault()
+    //
+    // const button = event.target
+    // const li = button.parentElement
+    //
+    // this.tabTargets.forEach((tab) => tab.classList.remove('active'))
+    //
+    // this.activeValue = li.dataset.tabId
+    // li.classList.add('active')
+    //
+    // if (this.activeValue === 'tab-demo') {
+    //   this.clearConsoleEvents()
+    //   this.consoleWrapperTarget.classList.remove('hidden')
+    // } else {
+    //   this.consoleWrapperTarget.classList.add('hidden')
+    // }
+    //
+    // this.frameTarget.src = li.dataset.src
   }
 
   clearConsoleEvents() {

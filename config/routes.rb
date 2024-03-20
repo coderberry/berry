@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   mount Lookbook::Engine, at: "/lookbook"
 
-  get "/demos/:name/:variant" => "demos#show", as: :demo
-  get "/demo_sources" => "demo_sources#show", as: :demo_source
+  # Demo routes (positioning is important)
+  get "/demos/:name/:variant/show" => "demos#show", as: :demo
+  get "/demos/:name/:variant/tabs/:active_tab_id" => "demos#tabs", as: :demo_tabs
+  get "/demos/:name/:variant/preview" => "demos#preview", as: :demo_preview
+  get "/demos/source_code" => "demos#source_code", as: :demo_source_code
 
   # legacy link
   get "/posts/rails-saas-conference/" => redirect("/blog/rails-saas-conference")
