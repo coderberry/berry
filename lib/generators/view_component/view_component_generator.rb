@@ -8,9 +8,9 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   class_option :sitepress, type: :boolean, default: false
   class_option :inline, type: :boolean, default: false
   class_option :skip_preview, type: :boolean, default: false
-  class_option :skip_js, type: :boolean, default: false
-  class_option :skip_locale, type: :boolean, default: true
-  class_option :skip_tailwind, type: :boolean, default: true
+  # class_option :skip_js, type: :boolean, default: false
+  # class_option :skip_locale, type: :boolean, default: true
+  # class_option :skip_tailwind, type: :boolean, default: true
   class_option :skip_test, type: :boolean, default: false
   class_option :skip_system_test, type: :boolean, default: true
 
@@ -47,25 +47,25 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   end
 
   def create_tailwind_file
-    return if options[:skip_css]
+    return if options[:skip_tailwind]
 
     template "tailwind.yml",
       File.join(root_path, class_path, file_name, "tailwind.yml")
   end
 
-  def create_js_file
-    return if options[:skip_js]
+  # def create_js_file
+  #   return if options[:skip_js]
+  #
+  #   template "index.js",
+  #     File.join(root_path, class_path, file_name, "index.js")
+  # end
 
-    template "index.js",
-      File.join(root_path, class_path, file_name, "index.js")
-  end
-
-  def create_locale_file
-    return if options[:skip_locale]
-
-    template "en.yml",
-      File.join(root_path, class_path, file_name, "en.yml")
-  end
+  # def create_locale_file
+  #   return if options[:skip_locale]
+  #
+  #   template "en.yml",
+  #     File.join(root_path, class_path, file_name, "en.yml")
+  # end
 
   private
 

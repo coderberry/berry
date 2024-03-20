@@ -1,0 +1,7 @@
+<%= tag.div class: "flex-shrink flex flew-row justify-between" do %>
+  <%= tag.ul class: "flex justify-start text-sm font-medium text-center text-gray-300 list-none" do %>
+    <%- tabs.each do |tab| -%>
+      <%= render Demo::Tab::Component.new(**tab) %>
+    <%- end -%>
+  <% end %>
+<% end %>

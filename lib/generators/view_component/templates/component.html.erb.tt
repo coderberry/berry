@@ -1,13 +1,3 @@
-<div class="<%= erb_wrapper_class %>"<%= erb_data_controller %>>
-  <div class="<%= erb_body_class %>">
-    <h3 class="text-xl font-semibold">
-      <%= erb_locale %>
-    </h3>
-
-    <pre>
-      <code class="language-ruby">
-        render Sitepress::<%= class_name %>::Component.new(<%= initialize_signature %>)
-      </code>
-    </pre>
-  </div>
-</div>
+<%%= tag.div class: css("wrapper") do %>
+  <%%= content %>
+<%% end %>

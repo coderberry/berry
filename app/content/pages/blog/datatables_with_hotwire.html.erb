@@ -1,0 +1,15 @@
+---
+title: Datatables with Hotwire
+banner_image_url: blog/datatables-with-hotwire/datatables-with-hotwire.png
+published_at: 2024-03-19
+tldr: Creating a datatable with Hotwire is a great way to add interactivity to your Rails app. In this tutorial, we'll show you how to create a datatable with Hotwire and Stimulus.
+author: Eric Berry
+---
+
+<%= c_sitepress_article(ArticleModel.new(current_page)) do |article| %>
+  <%= c_demo name: "datatables",
+             variant: "default",
+             stimulus_controllers: [
+               "app/javascript/controllers/datatable_controller.js"
+             ] %>
+<% end %>

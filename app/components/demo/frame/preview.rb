@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module <%= module_class_name %>
-  class Preview < <%= preview_parent_class %>
+module Demo::Frame
+  class Preview < ApplicationViewComponentPreview
     # You can specify the container class for the default template
     # self.container_class = "w-1/2 border border-gray-300"
 
     def default
-      render <%= module_class_name %>::Component.new(<%= initialize_signature %>)
+      render Demo::Frame::Component.new()
     end
   end
 end

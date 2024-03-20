@@ -1,0 +1,10 @@
+<%= tag.li class: token_list("group", "tab-active": active?),
+           data: {
+             demo_target: "tab",
+             demo_tab_id: tab_id,
+             demo_src: src
+           } do %>
+  <%= tag.button class: tw_classes, data: { action: "demo#selectTab" } do %>
+    <%= label %>
+  <% end %>
+<% end %>

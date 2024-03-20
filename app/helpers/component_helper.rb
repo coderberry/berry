@@ -11,28 +11,15 @@ module ComponentHelper
   #     <% end %>
   #   <% end %>
 
-  COMPONENT_HELPERS = {
-    code_block: "CodeBlock::Component",
-    container: "Container::Component",
-    image: "Image::Component",
-    image_caption: "ImageCaption::Component",
-    markdown: "Markdown::Component",
-    reading_time: "ReadingTime::Component",
-    sitepress_article: "Sitepress::Article::Component",
-    sitepress_article_card: "Sitepress::ArticleCard::Component",
-    sitepress_breadrumbs: "Sitepress::Breadcrumbs::Component",
-    sitepress_page: "Sitepress::Page::Component",
-    scroll_to_top: "ScrollToTop::Component",
-    title: "Title::Component",
-    tweet: "Tweet::Component"
-  }.freeze
+  # Auto-build helper methods for all components
+  Dir[Rails.root.join("app/components/**/component.rb")].each do |component_path|
+    component_sub_path = component_path.to_s.split("app/components/").last.gsub("/component.rb", "")
+    path_parts = component_sub_path.split("/")
+    helper_method = "c_#{path_parts.join("_")}"
+    component_class = "#{path_parts.map(&:camelize).join("::").constantize}::Component"
 
-  # standard:enable Layout/HashAlignment
-  COMPONENT_HELPERS.each do |name, component|
-    puts "COMPONENT: #{component.inspect}"
-    define_method :"c_#{name}" do |*args, **kwargs, &block|
-      # puts "RENDERING: #{ "::#{component}".constantize}"
-      render component.constantize.new(*args, **kwargs), &block
+    define_method :"#{helper_method}" do |*args, **kwargs, &block|
+      render component_class.constantize.new(*args, **kwargs), &block
     end
   end
 end
