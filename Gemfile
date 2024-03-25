@@ -4,7 +4,7 @@ ruby file: ".ruby-version"
 
 gem "bootsnap", require: false
 gem "commonmarker", "~> 1.0"
-gem "honeybadger", "~> 5.7"
+gem "honeybadger", "~> 5.8"
 gem "inline_svg", "~> 1.9"
 gem "jbuilder"
 gem "lookbook", "~> 2.2"
